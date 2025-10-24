@@ -13,8 +13,7 @@ target_include_directories(common
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-# dependencias públicas (la plantilla ya trae GSL)
-target_link_libraries(common
-    PUBLIC
-        Microsoft.GSL::GSL
-)
+target_link_libraries(common PUBLIC Microsoft.GSL::GSL)
+
+# config parser skeleton
+target_sources(common PRIVATE src/config.cpp)

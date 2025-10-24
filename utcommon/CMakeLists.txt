@@ -2,7 +2,7 @@ set(COMMON_SRC_FILES
   "${CMAKE_SOURCE_DIR}/common/src/vector.cpp"
 )
 
-set(CURRENT_DIR_SRC_FILES 
+set(CURRENT_DIR_SRC_FILES  test_config.cpp
   "${CMAKE_CURRENT_SOURCE_DIR}/test_vector.cpp"
 )
 
