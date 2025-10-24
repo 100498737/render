@@ -1,14 +1,12 @@
-#include "common/vector.hpp"
+#include "render/vector.hpp"
 #include <gtest/gtest.h>
 
-using common::Vec3;
-
-TEST(vector, magnitude_zero) {
-  Vec3 vec(0.0, 0.0, 0.0);
-  EXPECT_DOUBLE_EQ(vec.magnitude(), 0.0);
+TEST(test_vector_magnitude_zero, BasicAssertions) {
+  render::vector vec{0.0, 0.0, 0.0};
+  EXPECT_EQ(vec.magnitude(), 0.0);
 }
 
-TEST(vector, magnitude_positive) {
-  Vec3 vec(3.0, 4.0, 0.0);
+TEST(test_vector_magnitude_positive, BasicAssertions) {
+  render::vector vec{3.0, 4.0, 0.0};
   EXPECT_DOUBLE_EQ(vec.magnitude(), 5.0);
 }
