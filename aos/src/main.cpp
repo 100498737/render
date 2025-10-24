@@ -1,15 +1,16 @@
-#include <print>
+#include <cstdint>
+#include <cstdlib>
+#include <iostream>
 
-#include "vector.hpp"
+#include "common/vector.hpp"
 
-int main(int argc, char **) {
-  // Requisito: exactamente 3 argumentos (cfg, scene, out)
-  if (argc != 4) {
-    std::println(stderr, "Error: Invalid number of arguments: {}", argc - 1);
-    return 1;
-  }
-  std::println("Starting AOS rendering");
-  render::vector vec{1.0, 2.0, 3.0};
-  std::println("Vector magnitude: {}", vec.magnitude());
-  return 0;
+int main([[maybe_unused]] int argc, [[maybe_unused]] char ** argv) {
+  using common::Vec3;
+
+  // Pequeña prueba para asegurar que el binario linka bien.
+  Vec3 vec(1.0, 2.0, 3.0);
+
+  std::cout << "vector magnitude: " << vec.magnitude() << "\n";
+
+  return EXIT_SUCCESS;
 }
