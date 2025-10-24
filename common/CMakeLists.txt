@@ -1,19 +1,19 @@
 add_library(common STATIC)
 
-# fuentes que pertenecen a la librería common
 target_sources(common
     PRIVATE
         src/vector.cpp
         src/camera.cpp
+        # src/config.cpp      # <- si tu compi ya tiene parser config.cpp, descomenta
+        # src/scene.cpp       # <- si ya existe scene.cpp, descomenta
 )
 
-# directorios de cabeceras públicos
 target_include_directories(common
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-target_link_libraries(common PUBLIC Microsoft.GSL::GSL)
-
-# config parser skeleton
-target_sources(common PRIVATE src/config.cpp)
+target_link_libraries(common
+    PUBLIC
+        Microsoft.GSL::GSL
+)

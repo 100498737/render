@@ -48,5 +48,4 @@ int main(int argc, char * argv[]) {
   // - volcar PPM (TD2) con gamma cfg->gamma
 
   return 0;
->>>>>>> origin/main
 }
