@@ -8,3 +8,6 @@ target_sources(common
 target_include_directories(common PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 target_link_libraries(common PUBLIC Microsoft.GSL::GSL)
+
+# config parser skeleton
+target_sources(common PRIVATE src/config.cpp)

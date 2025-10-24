@@ -1,5 +1,6 @@
+# minimal cfg
 image_width=800
 aspect_ratio=1.7777777778
-samples_per_pixel=16
+samples_per_pixel=32
 max_depth=8
 gamma=2.2
