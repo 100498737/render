@@ -1,19 +1,19 @@
 add_library(common STATIC)
 
 target_sources(common
-    PRIVATE
-        src/vector.cpp
-        src/camera.cpp
-        # src/config.cpp      # <- si tu compi ya tiene parser config.cpp, descomenta
-        # src/scene.cpp       # <- si ya existe scene.cpp, descomenta
+  PRIVATE
+    src/camera.cpp      # tu cámara
+    src/config.cpp      # este stub que acabamos de hacer
+    # src/vector.cpp    # <-- SOLO si tienes un .cpp separado. 
+                        # Si TODO Vec3 está inline en vector.hpp, NO pongas esto.
 )
 
 target_include_directories(common
-    PUBLIC
-        ${CMAKE_CURRENT_SOURCE_DIR}/include
+  PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 target_link_libraries(common
-    PUBLIC
-        Microsoft.GSL::GSL
+  PUBLIC
+    Microsoft.GSL::GSL
 )

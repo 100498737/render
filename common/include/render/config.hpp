@@ -1,18 +1,26 @@
 #pragma once
+
+#include <cstdint>
 #include <optional>
 #include <string>
 
+#include "render/vector.hpp"  // <- necesitamos Vec3 antes de usarlo
+
 namespace render {
 
-struct Config {
-  int    image_width       = 256;
-  double aspect_ratio      = 16.0/9.0;
-  int    samples_per_pixel = 10;
-  int    max_depth         = 10;
-  double gamma             = 2.2;
-  // TODO: cámara, semillas, etc.
-};
+  struct Config {
+    std::uint32_t width;
+    std::uint32_t height;
+    double vfov_deg;  // vertical FOV en grados
+    Vec3 lookfrom;
+    Vec3 lookat;
+    Vec3 vup;
+    std::uint32_t samples_per_pixel;
+    std::uint64_t seed;
+  };
 
-std::optional<Config> try_parse_config(const std::string& path, std::string* err);
+  // stub temporal: intenta "parsear" el fichero de config.
+  // Devuelve Config fijo por ahora, y pone err="".
+  [[nodiscard]] std::optional<Config> try_parse_config(std::string const & path, std::string * err);
 
-} // namespace render
+}  // namespace render
