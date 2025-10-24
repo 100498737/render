@@ -41,12 +41,18 @@ namespace render {
   }
 
   ray camera::get_ray(std::uint32_t px, std::uint32_t py, std::uint32_t /*sample_id*/) {
-    // centro del píxel (px,py) en coordenadas de mundo
-    vector pixel_center = m_lower_left_corner +
-                          (static_cast<double>(px) + 0.5) * m_pixel_delta_u +
-                          (static_cast<double>(py) + 0.5) * m_pixel_delta_v;
+    // jitter aleatorio dentro del píxel [0,1)
+    double const jitter_u = m_dist(m_rng);
+    double const jitter_v = m_dist(m_rng);
 
-    vector dir = pixel_center - m_origin;
+    // posición dentro del píxel (px + offset subpixel, py + offset subpixel)
+    double const pixel_x = static_cast<double>(px) + jitter_u;
+    double const pixel_y = static_cast<double>(py) + jitter_v;
+
+    vector pixel_sample =
+        m_lower_left_corner + pixel_x * m_pixel_delta_u + pixel_y * m_pixel_delta_v;
+
+    vector dir = pixel_sample - m_origin;
     return ray(m_origin, dir.normalized());
   }
 
