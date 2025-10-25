@@ -7,11 +7,10 @@
 
 namespace render {
 
-  // ============================================================
+  // ------------------------------------------------------------
   // try_parse_config
   //
-  // Formato esperado del archivo de configuración:
-  //
+  // Formato:
   //   width 800
   //   height 450
   //   fov 60
@@ -21,12 +20,12 @@ namespace render {
   //   lookat   0 0 0
   //   vup      0 1 0
   //
-  // Reglas (TA2):
-  //  - Si una línea tiene una clave desconocida => error.
-  //  - Si el valor tiene basura extra => error.
-  //  - Si falta una propiedad, se deja el valor por defecto del struct.
-  //  - Validaciones básicas: width>0, height>0, fov en (0,180), samples>0.
-  // ============================================================
+  // Reglas:
+  //   - clave desconocida => error
+  //   - basura extra => error
+  //   - si falta campo, se queda el valor por defecto del struct Config
+  //   - validaciones básicas (>0, rangos razonables, etc)
+  // ------------------------------------------------------------
   std::optional<Config> try_parse_config(std::string const & filename, std::string * err) {
     std::ifstream file(filename);
     if (!file.is_open()) {
@@ -36,7 +35,7 @@ namespace render {
       return std::nullopt;
     }
 
-    Config cfg{};  // defaults válidos
+    Config cfg{};  // usa defaults válidos de Config
 
     std::string line;
     int line_number = 0;
@@ -175,7 +174,6 @@ namespace render {
         }
 
       } else {
-        // clave desconocida
         if (err) {
           *err =
               "Error: invalid key '" + key + "' in " + filename + ":" + std::to_string(line_number);
@@ -183,7 +181,7 @@ namespace render {
         return std::nullopt;
       }
 
-      // comprobar basura extra en esa línea
+      // basura extra al final de línea
       std::string trailing;
       if (iss >> trailing) {
         if (err) {
@@ -198,22 +196,17 @@ namespace render {
       }
     }
 
-    // todo OK
     return cfg;
   }
 
-  // ============================================================
+  // ------------------------------------------------------------
   // try_parse_scene
   //
-  // Formato mínimo soportado para TA2:
-  //
+  // Soporta objetos tipo:
   //   sphere cx cy cz r
   //
-  // Validaciones:
-  //   - r > 0
-  //   - palabra desconocida => error
-  //   - basura extra => error
-  // ============================================================
+  // Valida que r > 0, y que no haya tokens basura.
+  // ------------------------------------------------------------
   std::optional<Scene> try_parse_scene(std::string const & filename, std::string * err) {
     std::ifstream file(filename);
     if (!file.is_open()) {
@@ -265,7 +258,6 @@ namespace render {
           .radius = r,
         });
 
-        // ¿basura extra tras la esfera?
         std::string trailing;
         if (iss >> trailing) {
           if (err) {

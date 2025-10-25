@@ -1,79 +1,88 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Ruta al binario SOA en gcc-release
-BIN_SOA="out/build/default/soa/Release/render-soa"
-
 echo "=== Functional tests TA1 ==="
 
-# ---------- helper para testear una llamada ----------
-run_and_check() {
-    local desc="$1"        # descripción humana del caso
-    local expect_rc="$2"   # código de salida esperado
-    local expect_err="$3"  # substring esperado en stderr (puede ser "")
+# Ruta del ejecutable de render-soa que genera CMake con el preset gcc-release
+BIN_SOA="out/build/default/soa/Release/render-soa"
 
-    # Ejecutamos el binario, capturando stderr y rc.
-    # stdout no nos importa porque debe estar vacío en ambos casos.
-    set +e
-    ERR_MSG="$("$BIN_SOA" "${@:4}" 2>&1 1>/dev/null)"
-    RC=$?
-    set -e
+#######################################
+# Test 1: SIN argumentos
+#######################################
 
-    # Comprobación código retorno
-    if [ "$RC" -ne "$expect_rc" ]; then
-        echo "ASSERT FAIL: RC ($desc)"
-        echo " got : [$RC]"
-        echo " want: [$expect_rc]"
-        exit 1
-    fi
+# ejecutamos el binario SIN args
+# redirigimos stdout y stderr a ficheros temporales
+"$BIN_SOA" >stdout0.txt 2>stderr0.txt || true
+rc0=$?
 
-    # Comprobación del mensaje de error (solo si esperamos uno)
-    if [ -n "$expect_err" ]; then
-        if [[ "$ERR_MSG" != "$expect_err" ]]; then
-            echo "ASSERT FAIL: STDERR ($desc)"
-            echo " got : [$ERR_MSG]"
-            echo " want: [$expect_err]"
-            exit 1
-        fi
-    else
-        # No esperamos error -> stderr tiene que estar vacío
-        if [ -n "$ERR_MSG" ]; then
-            echo "ASSERT FAIL: STDERR ($desc)"
-            echo " got non-empty stderr: [$ERR_MSG]"
-            echo " want: []"
-            exit 1
-        fi
-    fi
-}
+want_rc0=1
+want_err0="Error: Invalid number of arguments: 0"
 
-# ---------- caso 1: sin argumentos de usuario ----------
-# Esperamos:
-#   stderr: "Error: Invalid number of arguments: 0"
-#   rc:     1
-run_and_check \
-    "0 args" \
-    1 \
-    "Error: Invalid number of arguments: 0" \
-    # no args after this line, so BIN_SOA is called with 0 extra args
+got_out0="$(cat stdout0.txt || true)"
+got_err0="$(cat stderr0.txt || true)"
 
-# ---------- caso 2: 3 argumentos válidos ----------
-# Esperamos:
-#   stderr: "" (vacío)
-#   rc:     0
-run_and_check \
-    "3 args" \
-    0 \
-    "" \
-    cfg.txt scene.txt out.ppm
+# assert exit code
+if [ "$rc0" -ne "$want_rc0" ]; then
+  echo "ASSERT FAIL: RC (0 args)"
+  echo " got : [$rc0]"
+  echo " want: [$want_rc0]"
+  exit 1
+fi
 
+# assert stderr exact
+if [ "$got_err0" != "$want_err0" ]; then
+  echo "ASSERT FAIL: STDERR (0 args)"
+  echo " got : [$got_err0]"
+  echo " want: [$want_err0]"
+  exit 1
+fi
 
+# assert stdout empty
+if [ -n "$got_out0" ]; then
+  echo "ASSERT FAIL: STDOUT not empty (0 args)"
+  echo " got : [$got_out0]"
+  echo " want: []"
+  exit 1
+fi
+
+#######################################
+# Test 2: CON 3 argumentos
+#######################################
+
+"$BIN_SOA" cfg.txt scn.txt out.ppm >stdout1.txt 2>stderr1.txt || true
+rc1=$?
+
+want_rc1=0
+
+got_out1="$(cat stdout1.txt || true)"
+got_err1="$(cat stderr1.txt || true)"
+
+# assert exit code
+if [ "$rc1" -ne "$want_rc1" ]; then
+  echo "ASSERT FAIL: RC (3 args)"
+  echo " got : [$rc1]"
+  echo " want: [$want_rc1]"
+  exit 1
+fi
+
+# assert stderr vacío
+if [ -n "$got_err1" ]; then
+  echo "ASSERT FAIL: STDERR not empty (3 args)"
+  echo " got : [$got_err1]"
+  echo " want: []"
+  exit 1
+fi
+
+#######################################
+# Si hemos llegado aquí, todo OK
+#######################################
 echo "ALL GOOD ✅"
 echo
 echo "--- expected CLI transcript example ---"
-echo "\$ $BIN_SOA"
+echo "\$ out/build/default/soa/Release/render-soa"
 echo "Error: Invalid number of arguments: 0"
 echo "\$? = 1"
 echo
-echo "\$ $BIN_SOA cfg.txt scene.txt out.ppm"
+echo "\$ out/build/default/soa/Release/render-soa cfg.txt scn.txt out.ppm"
 echo
 echo "\$? = 0"

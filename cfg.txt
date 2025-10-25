@@ -1,5 +1,8 @@
-image_width=800
-aspect_ratio=1.7777777778
-samples_per_pixel=16
-max_depth=8
-gamma=2.2
+image_width = 400
+image_height = 225
+vfov_deg = 60.0
+lookfrom = 0.0 0.0 1.0
+lookat = 0.0 0.0 0.0
+vup = 0.0 1.0 0.0
+samples_per_pixel = 4
+seed = 1234
