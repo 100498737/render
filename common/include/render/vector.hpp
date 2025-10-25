@@ -1,97 +1,70 @@
 #pragma once
 #include <cmath>
-#include <iostream>
+#include <cstdint>
 #include <print>
 
 namespace render {
 
-  // ====================================================================
-  // Estructura base del vector 3D utilizada en todo el proyecto
-  // ====================================================================
-  struct vector {
-    double x;
-    double y;
-    double z;
+  // --- Constantes numéricas globales (alineadas con el enunciado) ---
+  // EPS_HIT  -> evita autointersecciones de rayos recién generados
+  // EPS_TINY -> evita divisiones por ~0 al normalizar vectores
+  constexpr double EPS_HIT  = 1e-3;
+  constexpr double EPS_TINY = 1e-8;
 
-    // --- Constructores ---
-    constexpr vector() : x(0.0), y(0.0), z(0.0) { }
+  // --- Clase base: vector 3D ---
+  struct vector {
+    double x{};
+    double y{};
+    double z{};
+
+    // Constructores
+    constexpr vector() = default;
 
     constexpr vector(double x_, double y_, double z_) : x(x_), y(y_), z(z_) { }
 
-    // --- Operadores aritméticos básicos ---
-    constexpr vector operator+(vector const & other) const {
-      return {x + other.x, y + other.y, z + other.z};
+    // --- Operadores básicos ---
+    [[nodiscard]] constexpr vector operator+(vector const & other) const {
+      return vector{x + other.x, y + other.y, z + other.z};
     }
 
-    constexpr vector operator-(vector const & other) const {
-      return {x - other.x, y - other.y, z - other.z};
+    [[nodiscard]] constexpr vector operator-(vector const & other) const {
+      return vector{x - other.x, y - other.y, z - other.z};
     }
 
-    constexpr vector operator*(double scalar) const { return {x * scalar, y * scalar, z * scalar}; }
+    [[nodiscard]] constexpr vector operator*(double s) const { return vector{x * s, y * s, z * s}; }
 
-    constexpr vector operator/(double scalar) const { return {x / scalar, y / scalar, z / scalar}; }
+    [[nodiscard]] constexpr vector operator/(double s) const { return vector{x / s, y / s, z / s}; }
 
-    constexpr vector operator-() const { return {-x, -y, -z}; }
-
-    // --- Operadores compuestos ---
-    vector & operator+=(vector const & other) {
-      x += other.x;
-      y += other.y;
-      z += other.z;
-      return *this;
-    }
-
-    vector & operator-=(vector const & other) {
-      x -= other.x;
-      y -= other.y;
-      z -= other.z;
-      return *this;
-    }
-
-    vector & operator*=(double scalar) {
-      x *= scalar;
-      y *= scalar;
-      z *= scalar;
-      return *this;
-    }
-
-    vector & operator/=(double scalar) {
-      x /= scalar;
-      y /= scalar;
-      z /= scalar;
-      return *this;
-    }
-
-    // --- Producto punto y cruz ---
+    // --- Producto escalar y vectorial ---
     [[nodiscard]] constexpr double dot(vector const & other) const {
       return x * other.x + y * other.y + z * other.z;
     }
 
     [[nodiscard]] constexpr vector cross(vector const & other) const {
-      return {y * other.z - z * other.y, z * other.x - x * other.z, x * other.y - y * other.x};
+      return vector{y * other.z - z * other.y, z * other.x - x * other.z,
+                    x * other.y - y * other.x};
     }
 
-    // --- Magnitud y normalización ---
-    [[nodiscard]] double magnitude() const { return std::sqrt(x * x + y * y + z * z); }
+    // --- Magnitud (longitud euclídea) ---
+    [[nodiscard]] double magnitude() const { return std::sqrt(dot(*this)); }
 
+    // --- Normalización (versor) ---
     [[nodiscard]] vector normalized() const {
-      double mag = magnitude();
-      return (mag > 1e-12) ? (*this / mag) : vector{};
+      double const len = magnitude();
+      if (len < EPS_TINY) {
+        // Evitar división por casi 0 → devolvemos el propio vector
+        return *this;
+      }
+      return *this / len;
     }
-
-    // --- Utilidad para depuración ---
-    void print() const { std::println("({}, {}, {})", x, y, z); }
   };
 
-  // ====================================================================
-  // Funciones auxiliares fuera del struct
-  // ====================================================================
-
-  [[nodiscard]] inline vector operator*(double scalar, vector const & v) {
-    return {v.x * scalar, v.y * scalar, v.z * scalar};
+  // --- Operador escalar * vector (por la izquierda) ---
+  [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+    return vector{v.x * s, v.y * s, v.z * s};
   }
 
-  // --- Alias de compatibilidad con otros módulos / compañeros ---
-  using Vec3 = vector;  // 👈 Esto hace que render::Vec3 == render::vector
+  // --- Alias oficial del enunciado ---
+  using Vec3 = vector;
 
 }  // namespace render

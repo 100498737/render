@@ -1,5 +1,4 @@
 #pragma once
-
 #include "render/vector.hpp"
 
 namespace render {
@@ -12,8 +11,8 @@ namespace render {
 
     constexpr ray(vector const & o, vector const & d) : origin(o), direction(d) { }
 
-    // punto a lo largo del rayo en parámetro t
-    constexpr vector at(double t) const { return origin + direction * t; }
+    // Devuelve el punto P(t) = O + D * t
+    [[nodiscard]] constexpr vector at(double t) const { return origin + direction * t; }
   };
 
 }  // namespace render

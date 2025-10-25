@@ -1,16 +1,8 @@
-set(COMMON_SRC_FILES 
-  #"${CMAKE_SOURCE_DIR}/soa/src/file1.cpp"
-)
-
-set(CURRENT_DIR_SRC_FILES 
-  "${CMAKE_CURRENT_SOURCE_DIR}/test_vector.cpp"
-)
-
-# add_unit_test_target(
-#   TARGET_NAME utsoa
-#   SOURCE_FILES ${COMMON_SRC_FILES} ${CURRENT_DIR_SRC_FILES}
-#   LIBRARY_FILTER soa
-#   COVERAGE_DIR coverage-soa
-#   LIBRARY_TO_LINK common
-#   INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/soa/include
-# )
+# utsoa/CMakeLists.txt
+#
+# Este CMakeLists ya no declara otro ejecutable. Solo existe
+# para que el proyecto no pete si alguien hace add_subdirectory(utsoa)
+# más adelante, y lo podemos usar en el futuro si queremos
+# añadir tests funcionales como target propio.
+#
+# (vacío a propósito)
