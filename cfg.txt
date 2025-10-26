@@ -1,8 +1,8 @@
-image_width = 400
-image_height = 225
-vfov_deg = 60.0
-lookfrom = 0.0 0.0 1.0
-lookat = 0.0 0.0 0.0
-vup = 0.0 1.0 0.0
-samples_per_pixel = 4
-seed = 1234
+width  200
+height 100
+fov    45
+samples 1
+seed   1
+lookfrom 0 0 1
+lookat   0 0 0
+vup      0 1 0

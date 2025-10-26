@@ -1,32 +1,46 @@
 #include <cstdint>
-#include <cstdio>  // stderr
-#include <print>   // std::println
+#include <cstdio>   // stderr
+#include <print>    // std::println
+#include <string>
+
+#include "render/camera.hpp"
+#include "render/config.hpp"
+#include "render/parser.hpp"
+#include "render/scene.hpp"
+#include "render/vector.hpp"
 
 namespace {
-
-  // Mensaje EXACTO según TA1
   [[nodiscard]] int handle_bad_argc(int provided_args) {
     std::println(stderr, "Error: Invalid number of arguments: {}", provided_args);
     return 1;
   }
+}
 
-}  // namespace
-
-int main(int argc, char * argv[]) {
-  // Queremos exactamente 3 argumentos del usuario:
-  //
-  //   argv[1] = config file path
-  //   argv[2] = scene file path
-  //   argv[3] = output image path
-  //
-  // Eso implica argc == 4 (programa + 3 args).
+int main(int argc, char* argv[]) {
+  // TA1: exactamente 3 argumentos de usuario => argc debe ser 4
   if (argc != 4) {
-    // argc-1 = nº argumentos "del usuario"
     return handle_bad_argc(argc - 1);
   }
 
-  // TA1: no hacemos nada más, éxito directo.
-  (void) argv;  // silenciar warning
+  // TA2: validar config; si falla, imprimir el mensaje del parser a stderr y devolver 1
+  {
+    std::string err;
+    auto cfg = render::try_parse_config(argv[1], &err); // std::optional<Config>
+    if (!cfg) {
+      std::println(stderr, "{}", err);
+      return 1;
+    }
+  }
+
+  // TA3: parsear la escena; en error, imprimir y salir con 1
+  {
+    std::string err_scn;
+    auto scn = render::try_parse_scene(argv[2], &err_scn);
+    if (!scn) {
+      std::println(stderr, "{}", err_scn);
+      return 1;
+    }
+  }
 
   return 0;
 }
