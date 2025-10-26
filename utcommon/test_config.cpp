@@ -1,20 +1,19 @@
-#include <gtest/gtest.h>
-#include <fstream>
 #include "render/config.hpp"
+#include <fstream>
+#include <gtest/gtest.h>
 
-using render::try_parse_config;
 using render::Config;
+using render::try_parse_config;
 
 TEST(Config, OpensAndParsesMinimal) {
   // Creamos un cfg temporal
-  const char* path = "tmp_cfg_ok.txt";
-  std::ofstream(path)
-    << "# minimal cfg\n"
-    << "image_width=800\n"
-    << "aspect_ratio=1.7777777778\n"
-    << "samples_per_pixel=32\n"
-    << "max_depth=8\n"
-    << "gamma=2.2\n";
+  char const * path = "tmp_cfg_ok.txt";
+  std::ofstream(path) << "# minimal cfg\n"
+                      << "image_width=800\n"
+                      << "aspect_ratio=1.7777777778\n"
+                      << "samples_per_pixel=32\n"
+                      << "max_depth=8\n"
+                      << "gamma=2.2\n";
 
   std::string err;
   auto got = try_parse_config(path, &err);
@@ -34,7 +33,7 @@ TEST(Config, MissingFile) {
 }
 
 TEST(Config, UnknownKey) {
-  const char* path = "tmp_cfg_badkey.txt";
+  char const * path = "tmp_cfg_badkey.txt";
   std::ofstream(path) << "foo=42\n";
   std::string err;
   auto bad = try_parse_config(path, &err);
@@ -43,7 +42,7 @@ TEST(Config, UnknownKey) {
 }
 
 TEST(Config, InvalidValue) {
-  const char* path = "tmp_cfg_badval.txt";
+  char const * path = "tmp_cfg_badval.txt";
   std::ofstream(path) << "image_width=abc\n";
   std::string err;
   auto bad = try_parse_config(path, &err);

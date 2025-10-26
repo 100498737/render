@@ -1,0 +1,1646 @@
+[1/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -E -x c++ /workspace/common/src/config.cpp -MT common/CMakeFiles/common.dir/Release/src/config.cpp.o.ddi -MD -MF common/CMakeFiles/common.dir/Release/src/config.cpp.o.ddi.d -fmodules-ts -fdeps-file=common/CMakeFiles/common.dir/Release/src/config.cpp.o.ddi -fdeps-target=common/CMakeFiles/common.dir/Release/src/config.cpp.o -fdeps-format=p1689r5 -o common/CMakeFiles/common.dir/Release/src/config.cpp.o.ddi.i
+[2/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -E -x c++ /workspace/common/src/scene.cpp -MT common/CMakeFiles/common.dir/Release/src/scene.cpp.o.ddi -MD -MF common/CMakeFiles/common.dir/Release/src/scene.cpp.o.ddi.d -fmodules-ts -fdeps-file=common/CMakeFiles/common.dir/Release/src/scene.cpp.o.ddi -fdeps-target=common/CMakeFiles/common.dir/Release/src/scene.cpp.o -fdeps-format=p1689r5 -o common/CMakeFiles/common.dir/Release/src/scene.cpp.o.ddi.i
+[3/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -E -x c++ /workspace/common/src/camera.cpp -MT common/CMakeFiles/common.dir/Release/src/camera.cpp.o.ddi -MD -MF common/CMakeFiles/common.dir/Release/src/camera.cpp.o.ddi.d -fmodules-ts -fdeps-file=common/CMakeFiles/common.dir/Release/src/camera.cpp.o.ddi -fdeps-target=common/CMakeFiles/common.dir/Release/src/camera.cpp.o -fdeps-format=p1689r5 -o common/CMakeFiles/common.dir/Release/src/camera.cpp.o.ddi.i
+[4/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -E -x c++ /workspace/aos/src/main.cpp -MT aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.ddi -MD -MF aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.ddi.d -fmodules-ts -fdeps-file=aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.ddi -fdeps-target=aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o -fdeps-format=p1689r5 -o aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.ddi.i
+[5/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -E -x c++ /workspace/soa/src/main.cpp -MT soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.ddi -MD -MF soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.ddi.d -fmodules-ts -fdeps-file=soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.ddi -fdeps-target=soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o -fdeps-format=p1689r5 -o soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.ddi.i
+[6/34] /usr/bin/cmake -E cmake_ninja_dyndep --tdi=aos/CMakeFiles/render-aos.dir/Release/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=aos/CMakeFiles/render-aos.dir/Release/CXX.dd @aos/CMakeFiles/render-aos.dir/Release/CXX.dd.rsp
+[7/34] /usr/bin/cmake -E cmake_ninja_dyndep --tdi=soa/CMakeFiles/render-soa.dir/Release/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=soa/CMakeFiles/render-soa.dir/Release/CXX.dd @soa/CMakeFiles/render-soa.dir/Release/CXX.dd.rsp
+[8/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -E -x c++ /workspace/common/src/parser.cpp -MT common/CMakeFiles/common.dir/Release/src/parser.cpp.o.ddi -MD -MF common/CMakeFiles/common.dir/Release/src/parser.cpp.o.ddi.d -fmodules-ts -fdeps-file=common/CMakeFiles/common.dir/Release/src/parser.cpp.o.ddi -fdeps-target=common/CMakeFiles/common.dir/Release/src/parser.cpp.o -fdeps-format=p1689r5 -o common/CMakeFiles/common.dir/Release/src/parser.cpp.o.ddi.i
+[9/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -E -x c++ /workspace/common/src/ppm.cpp -MT common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.ddi -MD -MF common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.ddi.d -fmodules-ts -fdeps-file=common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.ddi -fdeps-target=common/CMakeFiles/common.dir/Release/src/ppm.cpp.o -fdeps-format=p1689r5 -o common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.ddi.i
+[10/34] /usr/bin/cmake -E cmake_ninja_dyndep --tdi=common/CMakeFiles/common.dir/Release/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=common/CMakeFiles/common.dir/Release/CXX.dd @common/CMakeFiles/common.dir/Release/CXX.dd.rsp
+[11/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -MD -MT _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/Release/src/gtest_main.cc.o -MF _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/Release/src/gtest_main.cc.o.d -o _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/Release/src/gtest_main.cc.o -c /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/src/gtest_main.cc
+[12/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++23 --coverage -fprofile-arcs -ftest-coverage -fprofile-generate -fprofile-update=atomic -E -x c++ /workspace/utcommon/test_camera.cpp -MT utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.ddi -MD -MF utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.ddi.d -fmodules-ts -fdeps-file=utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.ddi -fdeps-target=utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o -fdeps-format=p1689r5 -o utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.ddi.i
+[13/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++23 --coverage -fprofile-arcs -ftest-coverage -fprofile-generate -fprofile-update=atomic -E -x c++ /workspace/utcommon/test_vector.cpp -MT utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.ddi -MD -MF utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.ddi.d -fmodules-ts -fdeps-file=utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.ddi -fdeps-target=utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o -fdeps-format=p1689r5 -o utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.ddi.i
+[14/34] /usr/bin/cmake -E cmake_ninja_dyndep --tdi=utcommon/CMakeFiles/utcommon.dir/Release/CXXDependInfo.json --lang=CXX --modmapfmt=gcc --dd=utcommon/CMakeFiles/utcommon.dir/Release/CXX.dd @utcommon/CMakeFiles/utcommon.dir/Release/CXX.dd.rsp
+[15/34] /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -I/workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -MD -MT _deps/googletest-build/googletest/CMakeFiles/gtest.dir/Release/src/gtest-all.cc.o -MF _deps/googletest-build/googletest/CMakeFiles/gtest.dir/Release/src/gtest-all.cc.o.d -o _deps/googletest-build/googletest/CMakeFiles/gtest.dir/Release/src/gtest-all.cc.o -c /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/src/gtest-all.cc
+[16/34] : && /usr/bin/cmake -E rm -f lib/Release/libgtest.a && /usr/bin/ar qc lib/Release/libgtest.a  _deps/googletest-build/googletest/CMakeFiles/gtest.dir/Release/src/gtest-all.cc.o && /usr/bin/ranlib lib/Release/libgtest.a && :
+[17/34] : && /usr/bin/cmake -E rm -f lib/Release/libgtest_main.a && /usr/bin/ar qc lib/Release/libgtest_main.a  _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/Release/src/gtest_main.cc.o && /usr/bin/ranlib lib/Release/libgtest_main.a && :
+[18/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/config.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/config.cpp.o -MF common/CMakeFiles/common.dir/Release/src/config.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/config.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/config.cpp.o -c /workspace/common/src/config.cpp
+FAILED: common/CMakeFiles/common.dir/Release/src/config.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/config.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/config.cpp.o -MF common/CMakeFiles/common.dir/Release/src/config.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/config.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/config.cpp.o -c /workspace/common/src/config.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=common/CMakeFiles/common.dir/Release/src/config.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+91238 warnings and 3 errors generated.
+Error while processing /workspace/common/src/config.cpp.
+Suppressed 91237 warnings (91237 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+1 warning treated as error
+[19/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/scene.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/scene.cpp.o -MF common/CMakeFiles/common.dir/Release/src/scene.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/scene.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/scene.cpp.o -c /workspace/common/src/scene.cpp
+FAILED: common/CMakeFiles/common.dir/Release/src/scene.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/scene.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/scene.cpp.o -MF common/CMakeFiles/common.dir/Release/src/scene.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/scene.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/scene.cpp.o -c /workspace/common/src/scene.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=common/CMakeFiles/common.dir/Release/src/scene.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/scene.hpp:21:23: error: initializer for member 'center' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   21 |     Vec3        center{};
+      |                       ^~
+/workspace/common/include/render/scene.hpp:28:21: error: initializer for member 'base' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   28 |     Vec3        base{};
+      |                     ^~
+/workspace/common/include/render/scene.hpp:29:21: error: initializer for member 'axis' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   29 |     Vec3        axis{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+95445 warnings and 3 errors generated.
+Error while processing /workspace/common/src/scene.cpp.
+Suppressed 95441 warnings (95441 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+4 warnings treated as errors
+[20/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/camera.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/camera.cpp.o -MF common/CMakeFiles/common.dir/Release/src/camera.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/camera.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/camera.cpp.o -c /workspace/common/src/camera.cpp
+FAILED: common/CMakeFiles/common.dir/Release/src/camera.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/camera.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/camera.cpp.o -MF common/CMakeFiles/common.dir/Release/src/camera.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/camera.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/camera.cpp.o -c /workspace/common/src/camera.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=common/CMakeFiles/common.dir/Release/src/camera.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/ray.hpp:7:18: error: initializer for member 'origin' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    7 |     vector origin{};
+      |                  ^~
+/workspace/common/include/render/ray.hpp:8:21: error: initializer for member 'direction' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    8 |     vector direction{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+/workspace/common/src/camera.cpp:8:11: error: function 'camera' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+    8 |   camera::camera(std::uint32_t image_width, std::uint32_t image_height, double vfov_deg,
+      |           ^
+/workspace/common/src/camera.cpp:8:11: note: 73 lines including whitespace and comments (threshold 40)
+/workspace/common/src/camera.cpp:8:11: note: 8 parameters (threshold 4)
+/workspace/common/src/camera.cpp:8:23: error: no header providing "std::uint32_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+    4 | #include <numbers>  // std::numbers::pi
+    5 | 
+    6 | namespace render {
+    7 | 
+    8 |   camera::camera(std::uint32_t image_width, std::uint32_t image_height, double vfov_deg,
+      |                       ^
+/workspace/common/src/camera.cpp:9:18: error: no header providing "render::vector" is directly included [misc-include-cleaner,-warnings-as-errors]
+    2 | 
+    3 | #include <cmath>    // tan, numbers::pi
+    4 | #include <numbers>  // std::numbers::pi
+    5 | 
+    6 | namespace render {
+    7 | 
+    8 |   camera::camera(std::uint32_t image_width, std::uint32_t image_height, double vfov_deg,
+    9 |                  vector const & lookfrom, vector const & lookat, vector const & vup,
+      |                  ^
+/workspace/common/src/camera.cpp:10:56: error: no header providing "std::uint64_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+   10 |                  std::uint32_t samples_per_pixel, std::uint64_t seed)
+      |                                                        ^
+/workspace/common/src/camera.cpp:27:5: error: variable 'w' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   27 |     vector w = (lookfrom - lookat).normalized();  // mira desde lookat hacia lookfrom
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:28:5: error: variable 'u' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   28 |     vector u = (vup.cross(w)).normalized();       // derecha ortonormal
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:29:5: error: variable 'v' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   29 |     vector v = w.cross(u);                        // arriba ortonormal
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:49:5: error: variable 'forward' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   49 |     vector forward = (-1.0) * w;  // dirección de visión
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:55:5: error: variable 'viewport_u' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   55 |     vector viewport_u = viewport_width * u;
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:56:5: error: variable 'viewport_v' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   56 |     vector viewport_v = viewport_height * v;
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:66:5: error: variable 'center' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   66 |     vector center = m_origin + forward;
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:99:3: error: no header providing "render::ray" is directly included [misc-include-cleaner,-warnings-as-errors]
+    2 |   ray camera::get_ray(std::uint32_t px, std::uint32_t py, std::uint32_t /*sample_id*/) {
+      |   ^
+/workspace/common/src/camera.cpp:105:5: error: variable 'jitter_x' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  105 |     double jitter_x = m_dist(m_rng);
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:106:5: error: variable 'jitter_y' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  106 |     double jitter_y = m_dist(m_rng);
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:120:5: error: variable 'px_f' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  120 |     double px_f       = static_cast<double>(px) + jitter_x;
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:121:5: error: variable 'py_flipped' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  121 |     double py_flipped = (static_cast<double>(m_image_height - 1U - py)) + jitter_y;
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:123:5: error: variable 'pixel_sample' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  123 |     vector pixel_sample =
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:127:5: error: variable 'dir' of type 'vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  127 |     vector dir = (pixel_sample - m_origin).normalized();
+      |     ^
+      |            const 
+/workspace/common/src/camera.cpp:129:12: error: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list,-warnings-as-errors]
+  129 |     return ray(m_origin, dir);
+      |            ^
+105945 warnings and 3 errors generated.
+Error while processing /workspace/common/src/camera.cpp.
+Suppressed 105923 warnings (105923 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+22 warnings treated as errors
+[21/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utaos/test_image_aos.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -MD -MT utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o -MF utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o.d -o utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o -c /workspace/utaos/test_image_aos.cpp
+FAILED: utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utaos/test_image_aos.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -MD -MT utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o -MF utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o.d -o utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o -c /workspace/utaos/test_image_aos.cpp
+/workspace/aos/include/render/image_aos.hpp:14:54: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   ImageAOS(int w, int h) : width(w), height(h), data(w*h) {}
+      |                                                      ^
+/workspace/aos/include/render/image_aos.hpp:14:54: note: make conversion explicit to silence this warning
+    2 | #include <cstdint>
+    3 | #include <vector>
+    4 | #include <algorithm>
+    5 | #include <cmath>
+    6 | 
+    7 | namespace render {
+    8 | 
+    9 | struct ImageAOS {
+   10 |   struct Pixel { std::uint8_t r{}, g{}, b{}; };
+   11 |   int width{}, height{};
+   12 |   std::vector<Pixel> data;
+   13 | 
+   14 |   ImageAOS(int w, int h) : width(w), height(h), data(w*h) {}
+      |                                                      ^~~
+      |                                                      static_cast<size_type>( )
+/workspace/aos/include/render/image_aos.hpp:14:54: note: perform multiplication in a wider type
+   14 |   ImageAOS(int w, int h) : width(w), height(h), data(w*h) {}
+      |                                                      ^
+      |                                                      static_cast<long>( )
+/workspace/aos/include/render/image_aos.hpp:16:3: error: function 'idx' should be marked [[nodiscard]] [modernize-use-nodiscard,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^
+      |   [[nodiscard]] 
+/workspace/aos/include/render/image_aos.hpp:16:3: error: function 'idx' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^~~~~~
+/workspace/aos/include/render/image_aos.hpp:18:8: error: function 'set' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   18 |   void set(int x,int y, std::uint8_t r, std::uint8_t g, std::uint8_t b) {
+      |        ^
+/workspace/aos/include/render/image_aos.hpp:18:8: note: 5 parameters (threshold 4)
+/workspace/aos/include/render/image_aos.hpp:21:8: error: function 'get' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   21 |   void get(int x,int y, std::uint8_t& r, std::uint8_t& g, std::uint8_t& b) const {
+      |        ^
+/workspace/aos/include/render/image_aos.hpp:21:8: note: 5 parameters (threshold 4)
+/workspace/aos/include/render/image_aos.hpp:27:5: error: variable 'vi' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   27 |     int vi = (int)std::lround(v*255.0);
+      |     ^
+      |         const 
+/workspace/aos/include/render/image_aos.hpp:30:8: error: function 'set01' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   30 |   void set01(int x,int y, double r, double g, double b) {
+      |        ^
+/workspace/aos/include/render/image_aos.hpp:30:8: note: 5 parameters (threshold 4)
+/workspace/utaos/test_image_aos.cpp:7:8: error: no header providing "std::uint8_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+    2 | #include <gtest/gtest.h>
+    3 | 
+    4 | TEST(image_aos_basic, set_get_u8) {
+    5 |   render::ImageAOS img(4, 3);
+    6 |   img.set(1, 2, 100, 150, 200);
+    7 |   std::uint8_t r, g, b;
+      |        ^
+/workspace/utaos/test_image_aos.cpp:7:16: error: variable 'r' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    7 |   std::uint8_t r, g, b;
+      |                ^
+      |                  = 0
+/workspace/utaos/test_image_aos.cpp:7:19: error: variable 'g' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    7 |   std::uint8_t r, g, b;
+      |                   ^
+      |                     = 0
+/workspace/utaos/test_image_aos.cpp:7:22: error: variable 'b' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    7 |   std::uint8_t r, g, b;
+      |                      ^
+      |                        = 0
+/workspace/utaos/test_image_aos.cpp:17:16: error: variable 'r' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   17 |   std::uint8_t r, g, b;
+      |                ^
+      |                  = 0
+/workspace/utaos/test_image_aos.cpp:17:19: error: variable 'g' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   17 |   std::uint8_t r, g, b;
+      |                   ^
+      |                     = 0
+/workspace/utaos/test_image_aos.cpp:17:22: error: variable 'b' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   17 |   std::uint8_t r, g, b;
+      |                      ^
+      |                        = 0
+111372 warnings generated.
+Suppressed 111372 warnings (111358 in non-user code, 14 NOLINT).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+14 warnings treated as errors
+[22/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utsoa/test_image_soa.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -MD -MT utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o -MF utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o.d -o utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o -c /workspace/utsoa/test_image_soa.cpp
+FAILED: utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utsoa/test_image_soa.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -MD -MT utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o -MF utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o.d -o utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o -c /workspace/utsoa/test_image_soa.cpp
+/workspace/soa/include/render/image_soa.hpp:14:28: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                            ^
+/workspace/soa/include/render/image_soa.hpp:14:28: note: make conversion explicit to silence this warning
+    2 | #include <cstdint>
+    3 | #include <vector>
+    4 | #include <algorithm>
+    5 | #include <cmath>
+    6 | 
+    7 | namespace render {
+    8 | 
+    9 | struct ImageSOA {
+   10 |   int width{}, height{};
+   11 |   std::vector<std::uint8_t> R, G, B;
+   12 | 
+   13 |   ImageSOA(int w, int h)
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                            ^~~
+      |                            static_cast<size_type>( )
+/workspace/soa/include/render/image_soa.hpp:14:28: note: perform multiplication in a wider type
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                            ^
+      |                            static_cast<long>( )
+/workspace/soa/include/render/image_soa.hpp:14:38: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                      ^
+/workspace/soa/include/render/image_soa.hpp:14:38: note: make conversion explicit to silence this warning
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                      ^~~
+      |                                      static_cast<size_type>( )
+/workspace/soa/include/render/image_soa.hpp:14:38: note: perform multiplication in a wider type
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                      ^
+      |                                      static_cast<long>( )
+/workspace/soa/include/render/image_soa.hpp:14:48: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                                ^
+/workspace/soa/include/render/image_soa.hpp:14:48: note: make conversion explicit to silence this warning
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                                ^~~
+      |                                                static_cast<size_type>( )
+/workspace/soa/include/render/image_soa.hpp:14:48: note: perform multiplication in a wider type
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                                ^
+      |                                                static_cast<long>( )
+/workspace/soa/include/render/image_soa.hpp:16:3: error: function 'idx' should be marked [[nodiscard]] [modernize-use-nodiscard,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^
+      |   [[nodiscard]] 
+/workspace/soa/include/render/image_soa.hpp:16:3: error: function 'idx' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^~~~~~
+/workspace/soa/include/render/image_soa.hpp:18:8: error: function 'set' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   18 |   void set(int x,int y, std::uint8_t r, std::uint8_t g, std::uint8_t b) {
+      |        ^
+/workspace/soa/include/render/image_soa.hpp:18:8: note: 5 parameters (threshold 4)
+/workspace/soa/include/render/image_soa.hpp:22:8: error: function 'get' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   22 |   void get(int x,int y, std::uint8_t& r, std::uint8_t& g, std::uint8_t& b) const {
+      |        ^
+/workspace/soa/include/render/image_soa.hpp:22:8: note: 5 parameters (threshold 4)
+/workspace/soa/include/render/image_soa.hpp:28:5: error: variable 'vi' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   28 |     int vi = (int)std::lround(v*255.0);
+      |     ^
+      |         const 
+/workspace/soa/include/render/image_soa.hpp:31:8: error: function 'set01' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   31 |   void set01(int x,int y, double r, double g, double b) {
+      |        ^
+/workspace/soa/include/render/image_soa.hpp:31:8: note: 5 parameters (threshold 4)
+/workspace/utsoa/test_image_soa.cpp:7:8: error: no header providing "std::uint8_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+    2 | #include <gtest/gtest.h>
+    3 | 
+    4 | TEST(image_soa_basic, set_get_u8) {
+    5 |   render::ImageSOA img(4, 3);
+    6 |   img.set(2, 1, 10, 20, 30);
+    7 |   std::uint8_t r, g, b;
+      |        ^
+/workspace/utsoa/test_image_soa.cpp:7:16: error: variable 'r' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    7 |   std::uint8_t r, g, b;
+      |                ^
+      |                  = 0
+/workspace/utsoa/test_image_soa.cpp:7:19: error: variable 'g' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    7 |   std::uint8_t r, g, b;
+      |                   ^
+      |                     = 0
+/workspace/utsoa/test_image_soa.cpp:7:22: error: variable 'b' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    7 |   std::uint8_t r, g, b;
+      |                      ^
+      |                        = 0
+/workspace/utsoa/test_image_soa.cpp:17:16: error: variable 'r' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   17 |   std::uint8_t r, g, b;
+      |                ^
+      |                  = 0
+/workspace/utsoa/test_image_soa.cpp:17:19: error: variable 'g' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   17 |   std::uint8_t r, g, b;
+      |                   ^
+      |                     = 0
+/workspace/utsoa/test_image_soa.cpp:17:22: error: variable 'b' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   17 |   std::uint8_t r, g, b;
+      |                      ^
+      |                        = 0
+111370 warnings generated.
+Suppressed 111368 warnings (111354 in non-user code, 14 NOLINT).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+16 warnings treated as errors
+[23/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/ppm.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/ppm.cpp.o -MF common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/ppm.cpp.o -c /workspace/common/src/ppm.cpp
+FAILED: common/CMakeFiles/common.dir/Release/src/ppm.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/ppm.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/ppm.cpp.o -MF common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/ppm.cpp.o -c /workspace/common/src/ppm.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=common/CMakeFiles/common.dir/Release/src/ppm.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/src/ppm.cpp:3:1: error: included header algorithm is not used directly [misc-include-cleaner,-warnings-as-errors]
+    3 | #include <algorithm>
+      | ^~~~~~~~~~~~~~~~~~~~
+    4 | #include <cmath>
+/workspace/common/src/ppm.cpp:5:1: error: included header cstdint is not used directly [misc-include-cleaner,-warnings-as-errors]
+    5 | #include <cstdint>
+      | ^~~~~~~~~~~~~~~~~~
+    6 | #include <fstream>
+/workspace/common/src/ppm.cpp:24:5: error: variable 'g' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   24 |     double g = std::sqrt(clamp01(v01));
+      |     ^
+      |            const 
+/workspace/common/src/ppm.cpp:26:5: error: use `std::max` instead of `<` [readability-use-std-min-max,-warnings-as-errors]
+   26 |     if (vi < 0) {
+      |     ^~~~~~~~~~~~~
+      |     vi = std::max(vi, 0);
+   27 |       vi = 0;
+      |       ~~~~~~~
+   28 |     }
+      |     ~
+/workspace/common/src/ppm.cpp:29:5: error: use `std::min` instead of `>` [readability-use-std-min-max,-warnings-as-errors]
+   29 |     if (vi > 255) {
+      |     ^~~~~~~~~~~~~~~
+      |     vi = std::min(vi, 255);
+   30 |       vi = 255;
+      |       ~~~~~~~~~
+   31 |     }
+      |     ~
+/workspace/common/src/ppm.cpp:42:20: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+   42 |     if (width <= 0 || height <= 0) {
+      |                    ^~
+      |                    or
+/workspace/common/src/ppm.cpp:45:34: error: no header providing "std::ios" is directly included [misc-include-cleaner,-warnings-as-errors]
+    8 |     std::ofstream out(path, std::ios::out | std::ios::trunc);
+      |                                  ^
+/workspace/common/src/ppm.cpp:45:43: error: '|' is a traditional token spelling, consider using an alternative token 'bitor' for consistency [readability-operators-representation,-warnings-as-errors]
+   45 |     std::ofstream out(path, std::ios::out | std::ios::trunc);
+      |                                           ^
+      |                                           bitor
+/workspace/common/src/ppm.cpp:56:9: error: variable 'R' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   56 |         int R = to_byte_gamma2(r);
+      |         ^
+      |             const 
+/workspace/common/src/ppm.cpp:57:9: error: variable 'G' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   57 |         int G = to_byte_gamma2(g);
+      |         ^
+      |             const 
+/workspace/common/src/ppm.cpp:58:9: error: variable 'B' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   58 |         int B = to_byte_gamma2(b);
+      |         ^
+      |             const 
+120600 warnings and 3 errors generated.
+Error while processing /workspace/common/src/ppm.cpp.
+Suppressed 120589 warnings (120589 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+11 warnings treated as errors
+[24/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/soa/src/main.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -MD -MT soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o -MF soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.d -fmodules-ts -fmodule-mapper=soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o -c /workspace/soa/src/main.cpp
+FAILED: soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/soa/src/main.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -MD -MT soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o -MF soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.d -fmodules-ts -fmodule-mapper=soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o -c /workspace/soa/src/main.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/ray.hpp:7:18: error: initializer for member 'origin' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    7 |     vector origin{};
+      |                  ^~
+/workspace/common/include/render/ray.hpp:8:21: error: initializer for member 'direction' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    8 |     vector direction{};
+      |                     ^~
+/workspace/common/include/render/scene.hpp:21:23: error: initializer for member 'center' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   21 |     Vec3        center{};
+      |                       ^~
+/workspace/common/include/render/scene.hpp:28:21: error: initializer for member 'base' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   28 |     Vec3        base{};
+      |                     ^~
+/workspace/common/include/render/scene.hpp:29:21: error: initializer for member 'axis' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   29 |     Vec3        axis{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+/workspace/soa/include/render/image_soa.hpp:14:28: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                            ^
+/workspace/soa/include/render/image_soa.hpp:14:28: note: make conversion explicit to silence this warning
+    2 | #include <cstdint>
+    3 | #include <vector>
+    4 | #include <algorithm>
+    5 | #include <cmath>
+    6 | 
+    7 | namespace render {
+    8 | 
+    9 | struct ImageSOA {
+   10 |   int width{}, height{};
+   11 |   std::vector<std::uint8_t> R, G, B;
+   12 | 
+   13 |   ImageSOA(int w, int h)
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                            ^~~
+      |                            static_cast<size_type>( )
+/workspace/soa/include/render/image_soa.hpp:14:28: note: perform multiplication in a wider type
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                            ^
+      |                            static_cast<long>( )
+/workspace/soa/include/render/image_soa.hpp:14:38: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                      ^
+/workspace/soa/include/render/image_soa.hpp:14:38: note: make conversion explicit to silence this warning
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                      ^~~
+      |                                      static_cast<size_type>( )
+/workspace/soa/include/render/image_soa.hpp:14:38: note: perform multiplication in a wider type
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                      ^
+      |                                      static_cast<long>( )
+/workspace/soa/include/render/image_soa.hpp:14:48: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                                ^
+/workspace/soa/include/render/image_soa.hpp:14:48: note: make conversion explicit to silence this warning
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                                ^~~
+      |                                                static_cast<size_type>( )
+/workspace/soa/include/render/image_soa.hpp:14:48: note: perform multiplication in a wider type
+   14 |   : width(w), height(h), R(w*h,0), G(w*h,0), B(w*h,0) {}
+      |                                                ^
+      |                                                static_cast<long>( )
+/workspace/soa/include/render/image_soa.hpp:16:3: error: function 'idx' should be marked [[nodiscard]] [modernize-use-nodiscard,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^
+      |   [[nodiscard]] 
+/workspace/soa/include/render/image_soa.hpp:16:3: error: function 'idx' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^~~~~~
+/workspace/soa/include/render/image_soa.hpp:18:8: error: function 'set' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   18 |   void set(int x,int y, std::uint8_t r, std::uint8_t g, std::uint8_t b) {
+      |        ^
+/workspace/soa/include/render/image_soa.hpp:18:8: note: 5 parameters (threshold 4)
+/workspace/soa/include/render/image_soa.hpp:22:8: error: function 'get' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   22 |   void get(int x,int y, std::uint8_t& r, std::uint8_t& g, std::uint8_t& b) const {
+      |        ^
+/workspace/soa/include/render/image_soa.hpp:22:8: note: 5 parameters (threshold 4)
+/workspace/soa/include/render/image_soa.hpp:28:5: error: variable 'vi' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   28 |     int vi = (int)std::lround(v*255.0);
+      |     ^
+      |         const 
+/workspace/soa/include/render/image_soa.hpp:31:8: error: function 'set01' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   31 |   void set01(int x,int y, double r, double g, double b) {
+      |        ^
+/workspace/soa/include/render/image_soa.hpp:31:8: note: 5 parameters (threshold 4)
+/workspace/soa/src/main.cpp:7:1: error: included header camera.hpp is not used directly [misc-include-cleaner,-warnings-as-errors]
+    7 | #include "render/camera.hpp"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    8 | #include "render/config.hpp"
+/workspace/soa/src/main.cpp:12:1: error: included header scene.hpp is not used directly [misc-include-cleaner,-warnings-as-errors]
+   12 | #include "render/scene.hpp"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #include "render/vector.hpp"
+/workspace/soa/src/main.cpp:13:1: error: included header vector.hpp is not used directly [misc-include-cleaner,-warnings-as-errors]
+   13 | #include "render/vector.hpp"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   14 | 
+/workspace/soa/src/main.cpp:24:5: error: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape,-warnings-as-errors]
+   24 | int main(int argc, char * argv[]) {
+      |     ^
+/workspace/soa/src/main.cpp:24:5: error: function 'main' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+/workspace/soa/src/main.cpp:24:5: note: 46 lines including whitespace and comments (threshold 40)
+/workspace/soa/src/main.cpp:30:39: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   30 |   auto cfg = render::try_parse_config(argv[1], &err_cfg);
+      |                                       ^
+/workspace/soa/src/main.cpp:37:38: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   37 |   auto scn = render::try_parse_scene(argv[2], &err_scn);
+      |                                      ^
+/workspace/soa/src/main.cpp:56:31: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   56 |       render::write_ppm_gamma(argv[3], W, H, [&](int x, int y, double & r, double & g, double & b) {
+      |                               ^
+/workspace/soa/src/main.cpp:57:22: error: variable 'R' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   57 |         std::uint8_t R, G, B;
+      |                      ^
+      |                        = 0
+/workspace/soa/src/main.cpp:57:25: error: variable 'G' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   57 |         std::uint8_t R, G, B;
+      |                         ^
+      |                           = 0
+/workspace/soa/src/main.cpp:57:28: error: variable 'B' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   57 |         std::uint8_t R, G, B;
+      |                            ^
+      |                              = 0
+/workspace/soa/src/main.cpp:65:54: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   65 |     std::println(stderr, "Error: cannot write '{}'", argv[3]);
+      |                                                      ^
+/workspace/soa/src/main.cpp:68:40: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   68 |   std::println(stderr, "OK: wrote {}", argv[3]);
+      |                                        ^
+127322 warnings and 3 errors generated.
+Error while processing /workspace/soa/src/main.cpp.
+Suppressed 127294 warnings (127294 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+28 warnings treated as errors
+[25/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/aos/src/main.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -MD -MT aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o -MF aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.d -fmodules-ts -fmodule-mapper=aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o -c /workspace/aos/src/main.cpp
+FAILED: aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/aos/src/main.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -MD -MT aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o -MF aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.d -fmodules-ts -fmodule-mapper=aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o -c /workspace/aos/src/main.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/aos/include/render/image_aos.hpp:14:54: error: performing an implicit widening conversion to type 'size_type' (aka 'unsigned long') of a multiplication performed in type 'int' [bugprone-implicit-widening-of-multiplication-result,-warnings-as-errors]
+   14 |   ImageAOS(int w, int h) : width(w), height(h), data(w*h) {}
+      |                                                      ^
+/workspace/aos/include/render/image_aos.hpp:14:54: note: make conversion explicit to silence this warning
+    2 | #include <cstdint>
+    3 | #include <vector>
+    4 | #include <algorithm>
+    5 | #include <cmath>
+    6 | 
+    7 | namespace render {
+    8 | 
+    9 | struct ImageAOS {
+   10 |   struct Pixel { std::uint8_t r{}, g{}, b{}; };
+   11 |   int width{}, height{};
+   12 |   std::vector<Pixel> data;
+   13 | 
+   14 |   ImageAOS(int w, int h) : width(w), height(h), data(w*h) {}
+      |                                                      ^~~
+      |                                                      static_cast<size_type>( )
+/workspace/aos/include/render/image_aos.hpp:14:54: note: perform multiplication in a wider type
+   14 |   ImageAOS(int w, int h) : width(w), height(h), data(w*h) {}
+      |                                                      ^
+      |                                                      static_cast<long>( )
+/workspace/aos/include/render/image_aos.hpp:16:3: error: function 'idx' should be marked [[nodiscard]] [modernize-use-nodiscard,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^
+      |   [[nodiscard]] 
+/workspace/aos/include/render/image_aos.hpp:16:3: error: function 'idx' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   16 |   inline int idx(int x,int y) const { return y*width + x; }
+      |   ^~~~~~
+/workspace/aos/include/render/image_aos.hpp:18:8: error: function 'set' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   18 |   void set(int x,int y, std::uint8_t r, std::uint8_t g, std::uint8_t b) {
+      |        ^
+/workspace/aos/include/render/image_aos.hpp:18:8: note: 5 parameters (threshold 4)
+/workspace/aos/include/render/image_aos.hpp:21:8: error: function 'get' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   21 |   void get(int x,int y, std::uint8_t& r, std::uint8_t& g, std::uint8_t& b) const {
+      |        ^
+/workspace/aos/include/render/image_aos.hpp:21:8: note: 5 parameters (threshold 4)
+/workspace/aos/include/render/image_aos.hpp:27:5: error: variable 'vi' of type 'int' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   27 |     int vi = (int)std::lround(v*255.0);
+      |     ^
+      |         const 
+/workspace/aos/include/render/image_aos.hpp:30:8: error: function 'set01' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   30 |   void set01(int x,int y, double r, double g, double b) {
+      |        ^
+/workspace/aos/include/render/image_aos.hpp:30:8: note: 5 parameters (threshold 4)
+/workspace/aos/src/main.cpp:7:1: error: included header camera.hpp is not used directly [misc-include-cleaner,-warnings-as-errors]
+    7 | #include "render/camera.hpp"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    8 | #include "render/config.hpp"
+/workspace/aos/src/main.cpp:12:1: error: included header scene.hpp is not used directly [misc-include-cleaner,-warnings-as-errors]
+   12 | #include "render/scene.hpp"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #include "render/vector.hpp"
+/workspace/aos/src/main.cpp:13:1: error: included header vector.hpp is not used directly [misc-include-cleaner,-warnings-as-errors]
+   13 | #include "render/vector.hpp"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   14 | 
+/workspace/aos/src/main.cpp:24:5: error: an exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape,-warnings-as-errors]
+   24 | int main(int argc, char * argv[]) {
+      |     ^
+/workspace/aos/src/main.cpp:24:5: error: function 'main' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+/workspace/aos/src/main.cpp:24:5: note: 46 lines including whitespace and comments (threshold 40)
+/workspace/aos/src/main.cpp:30:39: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   30 |   auto cfg = render::try_parse_config(argv[1], &err_cfg);
+      |                                       ^
+/workspace/aos/src/main.cpp:37:38: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   37 |   auto scn = render::try_parse_scene(argv[2], &err_scn);
+      |                                      ^
+/workspace/aos/src/main.cpp:56:31: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   56 |       render::write_ppm_gamma(argv[3], W, H, [&](int x, int y, double & r, double & g, double & b) {
+      |                               ^
+/workspace/aos/src/main.cpp:57:22: error: variable 'R' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   57 |         std::uint8_t R, G, B;
+      |                      ^
+      |                        = 0
+/workspace/aos/src/main.cpp:57:25: error: variable 'G' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   57 |         std::uint8_t R, G, B;
+      |                         ^
+      |                           = 0
+/workspace/aos/src/main.cpp:57:28: error: variable 'B' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+   57 |         std::uint8_t R, G, B;
+      |                            ^
+      |                              = 0
+/workspace/aos/src/main.cpp:65:54: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   65 |     std::println(stderr, "Error: cannot write '{}'", argv[3]);
+      |                                                      ^
+/workspace/aos/src/main.cpp:68:40: error: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic,-warnings-as-errors]
+   68 |   std::println(stderr, "OK: wrote {}", argv[3]);
+      |                                        ^
+/workspace/common/include/render/ray.hpp:7:18: error: initializer for member 'origin' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    7 |     vector origin{};
+      |                  ^~
+/workspace/common/include/render/ray.hpp:8:21: error: initializer for member 'direction' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    8 |     vector direction{};
+      |                     ^~
+/workspace/common/include/render/scene.hpp:21:23: error: initializer for member 'center' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   21 |     Vec3        center{};
+      |                       ^~
+/workspace/common/include/render/scene.hpp:28:21: error: initializer for member 'base' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   28 |     Vec3        base{};
+      |                     ^~
+/workspace/common/include/render/scene.hpp:29:21: error: initializer for member 'axis' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   29 |     Vec3        axis{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+127319 warnings and 3 errors generated.
+Error while processing /workspace/aos/src/main.cpp.
+Suppressed 127293 warnings (127293 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+26 warnings treated as errors
+[26/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/parser.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/parser.cpp.o -MF common/CMakeFiles/common.dir/Release/src/parser.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/parser.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/parser.cpp.o -c /workspace/common/src/parser.cpp
+FAILED: common/CMakeFiles/common.dir/Release/src/parser.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/common/src/parser.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -O3 -DNDEBUG -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/Release/src/parser.cpp.o -MF common/CMakeFiles/common.dir/Release/src/parser.cpp.o.d -fmodules-ts -fmodule-mapper=common/CMakeFiles/common.dir/Release/src/parser.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o common/CMakeFiles/common.dir/Release/src/parser.cpp.o -c /workspace/common/src/parser.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=common/CMakeFiles/common.dir/Release/src/parser.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/scene.hpp:21:23: error: initializer for member 'center' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   21 |     Vec3        center{};
+      |                       ^~
+/workspace/common/include/render/scene.hpp:28:21: error: initializer for member 'base' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   28 |     Vec3        base{};
+      |                     ^~
+/workspace/common/include/render/scene.hpp:29:21: error: initializer for member 'axis' is redundant [readability-redundant-member-init,-warnings-as-errors]
+   29 |     Vec3        axis{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+/workspace/common/src/parser.cpp:17:8: error: no header providing "std::optional" is directly included [misc-include-cleaner,-warnings-as-errors]
+    5 | #include <sstream>
+    6 | #include <string>
+    7 | #include <unordered_set>
+    8 | 
+    9 | #include "render/parser.hpp"
+   10 | #include "render/scene.hpp"
+   11 | #include "render/vector.hpp"
+   12 | 
+   13 | namespace render {
+   14 | 
+   15 |   // ======================= TA2: CONFIG PARSER (tu versión) =====================
+   16 | 
+   17 |   std::optional<Config> try_parse_config(std::string const & filename, std::string * err) {
+      |        ^
+/workspace/common/src/parser.cpp:17:17: error: no header providing "render::Config" is directly included [misc-include-cleaner,-warnings-as-errors]
+   10 | #include "render/scene.hpp"
+   11 | #include "render/vector.hpp"
+   12 | 
+   13 | namespace render {
+   14 | 
+   15 |   // ======================= TA2: CONFIG PARSER (tu versión) =====================
+   16 | 
+   17 |   std::optional<Config> try_parse_config(std::string const & filename, std::string * err) {
+      |                 ^
+/workspace/common/src/parser.cpp:17:25: error: function 'try_parse_config' has cognitive complexity of 116 (threshold 50) [readability-function-cognitive-complexity,-warnings-as-errors]
+   17 |   std::optional<Config> try_parse_config(std::string const & filename, std::string * err) {
+      |                         ^
+/workspace/common/src/parser.cpp:19:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+   19 |     if (!file.is_open()) {
+      |     ^
+/workspace/common/src/parser.cpp:20:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+   20 |       if (err) {
+      |       ^
+/workspace/common/src/parser.cpp:31:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+   31 |     while (std::getline(file, line)) {
+      |     ^
+/workspace/common/src/parser.cpp:36:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+   36 |       for (char ch : line) {
+      |       ^
+/workspace/common/src/parser.cpp:37:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   37 |         if (!std::isspace(static_cast<unsigned char>(ch))) {
+      |         ^
+/workspace/common/src/parser.cpp:42:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+   42 |       if (only_ws) {
+      |       ^
+/workspace/common/src/parser.cpp:48:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+   48 |       if (!(iss >> key)) {
+      |       ^
+/workspace/common/src/parser.cpp:52:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+   52 |       if (key == "width") {
+      |       ^
+/workspace/common/src/parser.cpp:53:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   53 |         if (!(iss >> cfg.width)) {
+      |         ^
+/workspace/common/src/parser.cpp:54:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+   54 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:62:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   62 |         if (cfg.width == 0U) {
+      |         ^
+/workspace/common/src/parser.cpp:63:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+   63 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:69:14: note: +1, nesting level increased to 2
+   69 |       } else if (key == "height") {
+      |              ^
+/workspace/common/src/parser.cpp:70:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   70 |         if (!(iss >> cfg.height)) {
+      |         ^
+/workspace/common/src/parser.cpp:71:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+   71 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:79:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   79 |         if (cfg.height == 0U) {
+      |         ^
+/workspace/common/src/parser.cpp:80:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+   80 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:86:14: note: +1, nesting level increased to 2
+   86 |       } else if (key == "fov") {
+      |              ^
+/workspace/common/src/parser.cpp:87:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   87 |         if (!(iss >> cfg.vertical_fov_deg)) {
+      |         ^
+/workspace/common/src/parser.cpp:88:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+   88 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:96:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+   96 |         if (cfg.vertical_fov_deg <= 0.0 || cfg.vertical_fov_deg >= 180.0) {
+      |         ^
+/workspace/common/src/parser.cpp:96:41: note: +1
+   96 |         if (cfg.vertical_fov_deg <= 0.0 || cfg.vertical_fov_deg >= 180.0) {
+      |                                         ^
+/workspace/common/src/parser.cpp:97:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+   97 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:103:14: note: +1, nesting level increased to 2
+  103 |       } else if (key == "samples") {
+      |              ^
+/workspace/common/src/parser.cpp:104:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  104 |         if (!(iss >> cfg.samples_per_pixel)) {
+      |         ^
+/workspace/common/src/parser.cpp:105:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  105 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:113:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  113 |         if (cfg.samples_per_pixel == 0U) {
+      |         ^
+/workspace/common/src/parser.cpp:114:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  114 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:120:14: note: +1, nesting level increased to 2
+  120 |       } else if (key == "seed") {
+      |              ^
+/workspace/common/src/parser.cpp:121:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  121 |         if (!(iss >> cfg.seed)) {
+      |         ^
+/workspace/common/src/parser.cpp:122:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  122 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:131:14: note: +1, nesting level increased to 2
+  131 |       } else if (key == "lookfrom") {
+      |              ^
+/workspace/common/src/parser.cpp:132:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  132 |         if (!(iss >> cfg.lookfrom.x >> cfg.lookfrom.y >> cfg.lookfrom.z)) {
+      |         ^
+/workspace/common/src/parser.cpp:133:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  133 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:142:14: note: +1, nesting level increased to 2
+  142 |       } else if (key == "lookat") {
+      |              ^
+/workspace/common/src/parser.cpp:143:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  143 |         if (!(iss >> cfg.lookat.x >> cfg.lookat.y >> cfg.lookat.z)) {
+      |         ^
+/workspace/common/src/parser.cpp:144:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  144 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:153:14: note: +1, nesting level increased to 2
+  153 |       } else if (key == "vup") {
+      |              ^
+/workspace/common/src/parser.cpp:154:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  154 |         if (!(iss >> cfg.vup.x >> cfg.vup.y >> cfg.vup.z)) {
+      |         ^
+/workspace/common/src/parser.cpp:155:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  155 |           if (err) {
+      |           ^
+/workspace/common/src/parser.cpp:164:9: note: +1, nesting level increased to 2
+  164 |       } else {
+      |         ^
+/workspace/common/src/parser.cpp:165:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  165 |         if (err) {
+      |         ^
+/workspace/common/src/parser.cpp:174:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  174 |       if (iss >> trailing) {
+      |       ^
+/workspace/common/src/parser.cpp:175:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  175 |         if (err) {
+      |         ^
+/workspace/common/src/parser.cpp:17:25: error: function 'try_parse_config' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+   17 |   std::optional<Config> try_parse_config(std::string const & filename, std::string * err) {
+      |                         ^
+/workspace/common/src/parser.cpp:17:25: note: 171 lines including whitespace and comments (threshold 40)
+/workspace/common/src/parser.cpp:20:11: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   20 |       if (err) {
+      |           ^  
+      |               != nullptr
+/workspace/common/src/parser.cpp:23:19: error: no header providing "std::nullopt" is directly included [misc-include-cleaner,-warnings-as-errors]
+   23 |       return std::nullopt;
+      |                   ^
+/workspace/common/src/parser.cpp:36:12: error: variable 'ch' of type 'char' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   36 |       for (char ch : line) {
+      |            ^
+      |                 const 
+/workspace/common/src/parser.cpp:37:14: error: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   37 |         if (!std::isspace(static_cast<unsigned char>(ch))) {
+      |             ~^                                           
+      |                                                           == 0
+/workspace/common/src/parser.cpp:54:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   54 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:63:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   63 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:71:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   71 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:80:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   80 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:88:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   88 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:96:41: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+   96 |         if (cfg.vertical_fov_deg <= 0.0 || cfg.vertical_fov_deg >= 180.0) {
+      |                                         ^~
+      |                                         or
+/workspace/common/src/parser.cpp:97:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+   97 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:105:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  105 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:114:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  114 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:122:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  122 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:133:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  133 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:144:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  144 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:155:15: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  155 |           if (err) {
+      |               ^  
+      |                   != nullptr
+/workspace/common/src/parser.cpp:165:13: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  165 |         if (err) {
+      |             ^  
+      |                 != nullptr
+/workspace/common/src/parser.cpp:167:54: error: string concatenation results in allocation of unnecessary temporary strings; consider using 'operator+=' or 'string::append()' instead [performance-inefficient-string-concatenation,-warnings-as-errors]
+  167 |               "Error: invalid key '" + key + "' in " + filename + ":" + std::to_string(line_number);
+      |                                                      ^
+/workspace/common/src/parser.cpp:175:13: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  175 |         if (err) {
+      |             ^  
+      |                 != nullptr
+/workspace/common/src/parser.cpp:178:26: error: string concatenation results in allocation of unnecessary temporary strings; consider using 'operator+=' or 'string::append()' instead [performance-inefficient-string-concatenation,-warnings-as-errors]
+  178 |                  "' in " +
+      |                          ^
+/workspace/common/src/parser.cpp:192:24: error: function 'try_parse_scene' has cognitive complexity of 282 (threshold 50) [readability-function-cognitive-complexity,-warnings-as-errors]
+  192 |   std::optional<Scene> try_parse_scene(std::string const & filename, std::string * err) {
+      |                        ^
+/workspace/common/src/parser.cpp:193:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  193 |     if (err) {
+      |     ^
+/workspace/common/src/parser.cpp:198:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  198 |     if (!in) {
+      |     ^
+/workspace/common/src/parser.cpp:199:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  199 |       if (err) {
+      |       ^
+/workspace/common/src/parser.cpp:205:17: note: nesting level increased to 1
+  205 |     auto fail = [&](int line, std::string const & msg) -> std::optional<Scene> {
+      |                 ^
+/workspace/common/src/parser.cpp:206:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  206 |       if (err) {
+      |       ^
+/workspace/common/src/parser.cpp:217:24: note: nesting level increased to 1
+  217 |     auto parse_float = [](std::string_view s, double & out) -> bool {
+      |                        ^
+/workspace/common/src/parser.cpp:222:9: note: +2, including nesting penalty of 1, nesting level increased to 2
+  222 |       } catch (...) {
+      |         ^
+/workspace/common/src/parser.cpp:226:27: note: nesting level increased to 1
+  226 |     auto parse_vec3_csv = [&](std::string_view s, Vec3 & v) -> bool {
+      |                           ^
+/workspace/common/src/parser.cpp:230:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  230 |       if (!std::getline(ss, a, ',')) {
+      |       ^
+/workspace/common/src/parser.cpp:233:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  233 |       if (!std::getline(ss, b, ',')) {
+      |       ^
+/workspace/common/src/parser.cpp:236:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  236 |       if (!std::getline(ss, c, ',')) {
+      |       ^
+/workspace/common/src/parser.cpp:239:57: note: +1
+  239 |       return parse_float(a, v.x) && parse_float(b, v.y) && parse_float(c, v.z);
+      |                                                         ^
+/workspace/common/src/parser.cpp:241:22: note: nesting level increased to 1
+  241 |     auto normalize = [](Vec3 & v) -> bool {
+      |                      ^
+/workspace/common/src/parser.cpp:243:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  243 |       if (n <= 1e-12) {
+      |       ^
+/workspace/common/src/parser.cpp:254:5: note: +1, including nesting penalty of 0, nesting level increased to 1
+  254 |     while (std::getline(in, line_raw)) {
+      |     ^
+/workspace/common/src/parser.cpp:258:23: note: nesting level increased to 2
+  258 |       auto ltrim    = [](std::string & s) {
+      |                       ^
+/workspace/common/src/parser.cpp:260:53: note: nesting level increased to 3
+  260 |                    std::find_if(s.begin(), s.end(), [](unsigned char c) { return !std::isspace(c); }));
+      |                                                     ^
+/workspace/common/src/parser.cpp:262:20: note: nesting level increased to 2
+  262 |       auto rtrim = [](std::string & s) {
+      |                    ^
+/workspace/common/src/parser.cpp:263:52: note: nesting level increased to 3
+  263 |         s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char c) { return !std::isspace(c); })
+      |                                                    ^
+/workspace/common/src/parser.cpp:269:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  269 |       if (t.empty() || t[0] == '#') {
+      |       ^
+/workspace/common/src/parser.cpp:269:21: note: +1
+  269 |       if (t.empty() || t[0] == '#') {
+      |                     ^
+/workspace/common/src/parser.cpp:275:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  275 |       if (!(iss >> head)) {
+      |       ^
+/workspace/common/src/parser.cpp:280:22: note: nesting level increased to 2
+  280 |       auto is_kind = [&](std::string const & s) {
+      |                      ^
+/workspace/common/src/parser.cpp:281:45: note: +1
+  281 |         return s == "matte" || s == "metal" || s == "refractive";
+      |                                             ^
+/workspace/common/src/parser.cpp:283:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  283 |       if (head == "material" || is_kind(head)) {
+      |       ^
+/workspace/common/src/parser.cpp:283:30: note: +1
+  283 |       if (head == "material" || is_kind(head)) {
+      |                              ^
+/workspace/common/src/parser.cpp:285:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  285 |         if (head == "material") {
+      |         ^
+/workspace/common/src/parser.cpp:286:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  286 |           if (!(iss >> kindStr >> name)) {
+      |           ^
+/workspace/common/src/parser.cpp:289:11: note: +1, nesting level increased to 3
+  289 |         } else {
+      |           ^
+/workspace/common/src/parser.cpp:291:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  291 |           if (!(iss >> name)) {
+      |           ^
+/workspace/common/src/parser.cpp:295:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  295 |         if (phase == Phase::Objects) {
+      |         ^
+/workspace/common/src/parser.cpp:301:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  301 |         if (kindStr == "matte") {
+      |         ^
+/workspace/common/src/parser.cpp:303:16: note: +1, nesting level increased to 3
+  303 |         } else if (kindStr == "metal") {
+      |                ^
+/workspace/common/src/parser.cpp:305:16: note: +1, nesting level increased to 3
+  305 |         } else if (kindStr == "refractive") {
+      |                ^
+/workspace/common/src/parser.cpp:307:11: note: +1, nesting level increased to 3
+  307 |         } else {
+      |           ^
+/workspace/common/src/parser.cpp:311:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  311 |         if (!mat_names.insert(name).second) {
+      |         ^
+/workspace/common/src/parser.cpp:316:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  316 |         while (iss >> tok) {
+      |         ^
+/workspace/common/src/parser.cpp:317:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  317 |           if ((tok == "color") && m.kind != MaterialKind::Refractive) {
+      |           ^
+/workspace/common/src/parser.cpp:317:32: note: +1
+  317 |           if ((tok == "color") && m.kind != MaterialKind::Refractive) {
+      |                                ^
+/workspace/common/src/parser.cpp:321:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  321 |             if (iss >> r >> g >> b) {
+      |             ^
+/workspace/common/src/parser.cpp:323:15: note: +1, nesting level increased to 5
+  323 |             } else {
+      |               ^
+/workspace/common/src/parser.cpp:327:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  327 |               if (!(iss >> csv)) {
+      |               ^
+/workspace/common/src/parser.cpp:331:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  331 |               if (!parse_vec3_csv(csv, c)) {
+      |               ^
+/workspace/common/src/parser.cpp:336:18: note: +1, nesting level increased to 4
+  336 |           } else if (tok.rfind("color=", 0) == 0 && m.kind != MaterialKind::Refractive) {
+      |                  ^
+/workspace/common/src/parser.cpp:336:50: note: +1
+  336 |           } else if (tok.rfind("color=", 0) == 0 && m.kind != MaterialKind::Refractive) {
+      |                                                  ^
+/workspace/common/src/parser.cpp:338:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  338 |             if (!parse_vec3_csv(tok.substr(6), c)) {
+      |             ^
+/workspace/common/src/parser.cpp:342:18: note: +1, nesting level increased to 4
+  342 |           } else if ((tok == "fuzz") && m.kind == MaterialKind::Metal) {
+      |                  ^
+/workspace/common/src/parser.cpp:342:38: note: +1
+  342 |           } else if ((tok == "fuzz") && m.kind == MaterialKind::Metal) {
+      |                                      ^
+/workspace/common/src/parser.cpp:343:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  343 |             if (!(iss >> m.fuzz)) {
+      |             ^
+/workspace/common/src/parser.cpp:346:18: note: +1, nesting level increased to 4
+  346 |           } else if (tok.rfind("fuzz=", 0) == 0 && m.kind == MaterialKind::Metal) {
+      |                  ^
+/workspace/common/src/parser.cpp:346:49: note: +1
+  346 |           } else if (tok.rfind("fuzz=", 0) == 0 && m.kind == MaterialKind::Metal) {
+      |                                                 ^
+/workspace/common/src/parser.cpp:347:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  347 |             if (!parse_float(tok.substr(5), m.fuzz)) {
+      |             ^
+/workspace/common/src/parser.cpp:350:18: note: +1, nesting level increased to 4
+  350 |           } else if ((tok == "ior") && m.kind == MaterialKind::Refractive) {
+      |                  ^
+/workspace/common/src/parser.cpp:350:37: note: +1
+  350 |           } else if ((tok == "ior") && m.kind == MaterialKind::Refractive) {
+      |                                     ^
+/workspace/common/src/parser.cpp:351:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  351 |             if (!(iss >> m.ior)) {
+      |             ^
+/workspace/common/src/parser.cpp:354:18: note: +1, nesting level increased to 4
+  354 |           } else if (tok.rfind("ior=", 0) == 0 && m.kind == MaterialKind::Refractive) {
+      |                  ^
+/workspace/common/src/parser.cpp:354:48: note: +1
+  354 |           } else if (tok.rfind("ior=", 0) == 0 && m.kind == MaterialKind::Refractive) {
+      |                                                ^
+/workspace/common/src/parser.cpp:355:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  355 |             if (!parse_float(tok.substr(4), m.ior)) {
+      |             ^
+/workspace/common/src/parser.cpp:358:13: note: +1, nesting level increased to 4
+  358 |           } else {
+      |             ^
+/workspace/common/src/parser.cpp:364:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  364 |         if (m.kind == MaterialKind::Metal && (m.fuzz < 0.0 || m.fuzz > 1.0)) {
+      |         ^
+/workspace/common/src/parser.cpp:364:43: note: +1
+  364 |         if (m.kind == MaterialKind::Metal && (m.fuzz < 0.0 || m.fuzz > 1.0)) {
+      |                                           ^
+/workspace/common/src/parser.cpp:364:60: note: +1
+  364 |         if (m.kind == MaterialKind::Metal && (m.fuzz < 0.0 || m.fuzz > 1.0)) {
+      |                                                            ^
+/workspace/common/src/parser.cpp:367:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  367 |         if (m.kind == MaterialKind::Refractive && m.ior <= 1.0) {
+      |         ^
+/workspace/common/src/parser.cpp:367:48: note: +1
+  367 |         if (m.kind == MaterialKind::Refractive && m.ior <= 1.0) {
+      |                                                ^
+/workspace/common/src/parser.cpp:376:7: note: +2, including nesting penalty of 1, nesting level increased to 2
+  376 |       if (head == "sphere" || head == "cylinder") {
+      |       ^
+/workspace/common/src/parser.cpp:376:28: note: +1
+  376 |       if (head == "sphere" || head == "cylinder") {
+      |                            ^
+/workspace/common/src/parser.cpp:377:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  377 |         if (mat_names.empty()) {
+      |         ^
+/workspace/common/src/parser.cpp:382:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  382 |         if (head == "sphere") {
+      |         ^
+/workspace/common/src/parser.cpp:387:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  387 |           if (!(iss >> first)) {
+      |           ^
+/workspace/common/src/parser.cpp:395:38: note: +1
+  395 |           bool is_kv = (!nxt.empty() && nxt.find('=') != std::string::npos);
+      |                                      ^
+/workspace/common/src/parser.cpp:400:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  400 |           if (is_kv) {
+      |           ^
+/workspace/common/src/parser.cpp:404:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  404 |             while (iss >> kv) {
+      |             ^
+/workspace/common/src/parser.cpp:405:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  405 |               if (kv.rfind("center=", 0) == 0) {
+      |               ^
+/workspace/common/src/parser.cpp:407:17: note: +7, including nesting penalty of 6, nesting level increased to 7
+  407 |                 if (!parse_vec3_csv(kv.substr(7), c)) {
+      |                 ^
+/workspace/common/src/parser.cpp:412:22: note: +1, nesting level increased to 6
+  412 |               } else if (kv.rfind("radius=", 0) == 0) {
+      |                      ^
+/workspace/common/src/parser.cpp:413:17: note: +7, including nesting penalty of 6, nesting level increased to 7
+  413 |                 if (!parse_float(kv.substr(7), s.radius) || s.radius <= 0.0) {
+      |                 ^
+/workspace/common/src/parser.cpp:413:58: note: +1
+  413 |                 if (!parse_float(kv.substr(7), s.radius) || s.radius <= 0.0) {
+      |                                                          ^
+/workspace/common/src/parser.cpp:417:22: note: +1, nesting level increased to 6
+  417 |               } else if (kv.rfind("mat=", 0) == 0) {
+      |                      ^
+/workspace/common/src/parser.cpp:420:17: note: +1, nesting level increased to 6
+  420 |               } else {
+      |                 ^
+/workspace/common/src/parser.cpp:425:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  425 |             if (!(okc && okr && okm)) {
+      |             ^
+/workspace/common/src/parser.cpp:425:30: note: +1
+  425 |             if (!(okc && okr && okm)) {
+      |                              ^
+/workspace/common/src/parser.cpp:428:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  428 |             if (!sph_names.insert(s.name).second) {
+      |             ^
+/workspace/common/src/parser.cpp:431:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  431 |             if (!mat_names.count(s.mat)) {
+      |             ^
+/workspace/common/src/parser.cpp:435:13: note: +1, nesting level increased to 4
+  435 |           } else {
+      |             ^
+/workspace/common/src/parser.cpp:438:13: note: +5, including nesting penalty of 4, nesting level increased to 5
+  438 |             if (parse_float(first, testnum)) {
+      |             ^
+/workspace/common/src/parser.cpp:442:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  442 |               if (!(iss >> c.y >> c.z)) {
+      |               ^
+/workspace/common/src/parser.cpp:446:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  446 |               if (!(iss >> r)) {
+      |               ^
+/workspace/common/src/parser.cpp:449:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  449 |               if (r <= 0.0) {
+      |               ^
+/workspace/common/src/parser.cpp:457:15: note: +1, nesting level increased to 5
+  457 |             } else {
+      |               ^
+/workspace/common/src/parser.cpp:459:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  459 |               if (!sph_names.insert(s.name).second) {
+      |               ^
+/workspace/common/src/parser.cpp:462:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  462 |               if (!(iss >> s.center.x >> s.center.y >> s.center.z >> s.radius)) {
+      |               ^
+/workspace/common/src/parser.cpp:465:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  465 |               if (s.radius <= 0.0) {
+      |               ^
+/workspace/common/src/parser.cpp:468:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  468 |               if (!(iss >> s.mat)) {
+      |               ^
+/workspace/common/src/parser.cpp:471:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  471 |               if (!mat_names.count(s.mat)) {
+      |               ^
+/workspace/common/src/parser.cpp:476:15: note: +6, including nesting penalty of 5, nesting level increased to 6
+  476 |               if (iss >> extra) {
+      |               ^
+/workspace/common/src/parser.cpp:484:9: note: +3, including nesting penalty of 2, nesting level increased to 3
+  484 |         if (head == "cylinder") {
+      |         ^
+/workspace/common/src/parser.cpp:487:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  487 |           if (!(iss >> name)) {
+      |           ^
+/workspace/common/src/parser.cpp:490:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  490 |           if (!cyl_names.insert(name).second) {
+      |           ^
+/workspace/common/src/parser.cpp:494:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  494 |           if (!(iss >>
+      |           ^
+/workspace/common/src/parser.cpp:506:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  506 |           if (c.height <= 0.0 || c.radius <= 0.0) {
+      |           ^
+/workspace/common/src/parser.cpp:506:31: note: +1
+  506 |           if (c.height <= 0.0 || c.radius <= 0.0) {
+      |                               ^
+/workspace/common/src/parser.cpp:509:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  509 |           if (!(iss >> c.mat)) {
+      |           ^
+/workspace/common/src/parser.cpp:512:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  512 |           if (!normalize(c.axis)) {
+      |           ^
+/workspace/common/src/parser.cpp:515:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  515 |           if (!mat_names.count(c.mat)) {
+      |           ^
+/workspace/common/src/parser.cpp:520:11: note: +4, including nesting penalty of 3, nesting level increased to 4
+  520 |           if (iss >> extra) {
+      |           ^
+/workspace/common/src/parser.cpp:192:24: error: function 'try_parse_scene' exceeds recommended size/complexity thresholds [readability-function-size,-warnings-as-errors]
+  192 |   std::optional<Scene> try_parse_scene(std::string const & filename, std::string * err) {
+      |                        ^
+/workspace/common/src/parser.cpp:192:24: note: 340 lines including whitespace and comments (threshold 40)
+/workspace/common/src/parser.cpp:193:9: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  193 |     if (err) {
+      |         ^  
+      |             != nullptr
+/workspace/common/src/parser.cpp:199:11: error: implicit conversion 'std::string *' (aka 'basic_string<char> *') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  199 |       if (err) {
+      |           ^  
+      |               != nullptr
+/workspace/common/src/parser.cpp:217:32: error: no header providing "std::string_view" is directly included [misc-include-cleaner,-warnings-as-errors]
+    7 |     auto parse_float = [](std::string_view s, double & out) -> bool {
+      |                                ^
+/workspace/common/src/parser.cpp:219:9: error: no header providing "size_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+    4 |         size_t p = 0;
+      |         ^
+/workspace/common/src/parser.cpp:239:34: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  239 |       return parse_float(a, v.x) && parse_float(b, v.y) && parse_float(c, v.z);
+      |                                  ^~
+      |                                  and
+/workspace/common/src/parser.cpp:239:57: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  239 |       return parse_float(a, v.x) && parse_float(b, v.y) && parse_float(c, v.z);
+      |                                                         ^~
+      |                                                         and
+/workspace/common/src/parser.cpp:260:20: error: use a ranges version of this algorithm [modernize-use-ranges,-warnings-as-errors]
+  260 |                    std::find_if(s.begin(), s.end(), [](unsigned char c) { return !std::isspace(c); }));
+      |                    ^~~~~~~~~~~~ ~~~~~~~~~  ~~~~~~~
+      |                    std::ranges::find_if s
+/workspace/common/src/parser.cpp:263:17: error: use a ranges version of this algorithm [modernize-use-ranges,-warnings-as-errors]
+    5 |         s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char c) { return !std::isspace(c); })
+      |                 ^~~~~~~~~~~~ ~~~~~~~~~~  ~~~~~~~~
+      |                 std::ranges::find_if std::ranges::reverse_view(s)
+/workspace/common/src/parser.cpp:269:21: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  269 |       if (t.empty() || t[0] == '#') {
+      |                     ^~
+      |                     or
+/workspace/common/src/parser.cpp:281:29: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  281 |         return s == "matte" || s == "metal" || s == "refractive";
+      |                             ^~
+      |                             or
+/workspace/common/src/parser.cpp:281:45: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  281 |         return s == "matte" || s == "metal" || s == "refractive";
+      |                                             ^~
+      |                                             or
+/workspace/common/src/parser.cpp:283:30: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  283 |       if (head == "material" || is_kind(head)) {
+      |                              ^~
+      |                              or
+/workspace/common/src/parser.cpp:317:32: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  317 |           if ((tok == "color") && m.kind != MaterialKind::Refractive) {
+      |                                ^~
+      |                                and
+/workspace/common/src/parser.cpp:319:13: error: variable 'pos' of type 'std::streampos' (aka 'fpos<__mbstate_t>') can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  319 |             std::streampos pos = iss.tellg();
+      |             ^
+      |                            const 
+/workspace/common/src/parser.cpp:319:18: error: no header providing "std::streampos" is directly included [misc-include-cleaner,-warnings-as-errors]
+    5 |             std::streampos pos = iss.tellg();
+      |                  ^
+/workspace/common/src/parser.cpp:320:20: error: variable 'r' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+    1 |             double r, g, b;
+      |                    ^
+      |                      = NAN
+/workspace/common/src/parser.cpp:320:23: error: variable 'g' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+  320 |             double r, g, b;
+      |                       ^
+      |                         = NAN
+/workspace/common/src/parser.cpp:320:26: error: variable 'b' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+  320 |             double r, g, b;
+      |                          ^
+      |                            = NAN
+/workspace/common/src/parser.cpp:336:26: error: use starts_with instead of rfind [modernize-use-starts-ends-with,-warnings-as-errors]
+  336 |           } else if (tok.rfind("color=", 0) == 0 && m.kind != MaterialKind::Refractive) {
+      |                          ^~~~~ ~~~~~~~~~~~~~~~~~
+      |                          starts_with "color=")
+/workspace/common/src/parser.cpp:336:50: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  336 |           } else if (tok.rfind("color=", 0) == 0 && m.kind != MaterialKind::Refractive) {
+      |                                                  ^~
+      |                                                  and
+/workspace/common/src/parser.cpp:342:38: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  342 |           } else if ((tok == "fuzz") && m.kind == MaterialKind::Metal) {
+      |                                      ^~
+      |                                      and
+/workspace/common/src/parser.cpp:346:26: error: use starts_with instead of rfind [modernize-use-starts-ends-with,-warnings-as-errors]
+  346 |           } else if (tok.rfind("fuzz=", 0) == 0 && m.kind == MaterialKind::Metal) {
+      |                          ^~~~~ ~~~~~~~~~~~~~~~~
+      |                          starts_with "fuzz=")
+/workspace/common/src/parser.cpp:346:49: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  346 |           } else if (tok.rfind("fuzz=", 0) == 0 && m.kind == MaterialKind::Metal) {
+      |                                                 ^~
+      |                                                 and
+/workspace/common/src/parser.cpp:350:37: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  350 |           } else if ((tok == "ior") && m.kind == MaterialKind::Refractive) {
+      |                                     ^~
+      |                                     and
+/workspace/common/src/parser.cpp:354:26: error: use starts_with instead of rfind [modernize-use-starts-ends-with,-warnings-as-errors]
+  354 |           } else if (tok.rfind("ior=", 0) == 0 && m.kind == MaterialKind::Refractive) {
+      |                          ^~~~~ ~~~~~~~~~~~~~~~
+      |                          starts_with "ior=")
+/workspace/common/src/parser.cpp:354:48: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  354 |           } else if (tok.rfind("ior=", 0) == 0 && m.kind == MaterialKind::Refractive) {
+      |                                                ^~
+      |                                                and
+/workspace/common/src/parser.cpp:359:13: error: variable 'key' of type 'std::string' (aka 'basic_string<char>') can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  359 |             std::string key = tok.substr(0, tok.find('='));
+      |             ^
+      |                         const 
+/workspace/common/src/parser.cpp:360:77: error: string concatenation results in allocation of unnecessary temporary strings; consider using 'operator+=' or 'string::append()' instead [performance-inefficient-string-concatenation,-warnings-as-errors]
+  360 |             return fail(line_no, "unknown key '" + key + "' for material '" + kindStr + "'");
+      |                                                                             ^
+/workspace/common/src/parser.cpp:364:43: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  364 |         if (m.kind == MaterialKind::Metal && (m.fuzz < 0.0 || m.fuzz > 1.0)) {
+      |                                           ^~
+      |                                           and
+/workspace/common/src/parser.cpp:364:60: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  364 |         if (m.kind == MaterialKind::Metal && (m.fuzz < 0.0 || m.fuzz > 1.0)) {
+      |                                                            ^~
+      |                                                            or
+/workspace/common/src/parser.cpp:367:48: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  367 |         if (m.kind == MaterialKind::Refractive && m.ior <= 1.0) {
+      |                                                ^~
+      |                                                and
+/workspace/common/src/parser.cpp:371:38: error: no header providing "std::move" is directly included [misc-include-cleaner,-warnings-as-errors]
+    8 |         scn.materials.push_back(std::move(m));
+      |                                      ^
+/workspace/common/src/parser.cpp:376:28: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  376 |       if (head == "sphere" || head == "cylinder") {
+      |                            ^~
+      |                            or
+/workspace/common/src/parser.cpp:392:11: error: variable 'pos' of type 'std::streampos' (aka 'fpos<__mbstate_t>') can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  392 |           std::streampos pos = iss.tellg();
+      |           ^
+      |                          const 
+/workspace/common/src/parser.cpp:395:11: error: variable 'is_kv' of type 'bool' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  395 |           bool is_kv = (!nxt.empty() && nxt.find('=') != std::string::npos);
+      |           ^
+      |                const 
+/workspace/common/src/parser.cpp:395:38: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  395 |           bool is_kv = (!nxt.empty() && nxt.find('=') != std::string::npos);
+      |                                      ^~
+      |                                      and
+/workspace/common/src/parser.cpp:405:22: error: use starts_with instead of rfind [modernize-use-starts-ends-with,-warnings-as-errors]
+  405 |               if (kv.rfind("center=", 0) == 0) {
+      |                      ^~~~~ ~~~~~~~~~~~~~~~~~~
+      |                      starts_with "center=")
+/workspace/common/src/parser.cpp:412:29: error: use starts_with instead of rfind [modernize-use-starts-ends-with,-warnings-as-errors]
+  412 |               } else if (kv.rfind("radius=", 0) == 0) {
+      |                             ^~~~~ ~~~~~~~~~~~~~~~~~~
+      |                             starts_with "radius=")
+/workspace/common/src/parser.cpp:413:58: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  413 |                 if (!parse_float(kv.substr(7), s.radius) || s.radius <= 0.0) {
+      |                                                          ^~
+      |                                                          or
+/workspace/common/src/parser.cpp:417:29: error: use starts_with instead of rfind [modernize-use-starts-ends-with,-warnings-as-errors]
+  417 |               } else if (kv.rfind("mat=", 0) == 0) {
+      |                             ^~~~~ ~~~~~~~~~~~~~~~
+      |                             starts_with "mat=")
+/workspace/common/src/parser.cpp:425:23: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  425 |             if (!(okc && okr && okm)) {
+      |                       ^~
+      |                       and
+/workspace/common/src/parser.cpp:425:30: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+  425 |             if (!(okc && okr && okm)) {
+      |                              ^~
+      |                              and
+/workspace/common/src/parser.cpp:431:18: error: implicit conversion 'size_type' (aka 'unsigned long') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  431 |             if (!mat_names.count(s.mat)) {
+      |                 ~^                     
+      |                                         == 0u
+/workspace/common/src/parser.cpp:431:28: error: use 'contains' to check for membership [readability-container-contains,-warnings-as-errors]
+  431 |             if (!mat_names.count(s.mat)) {
+      |                            ^~~~~
+      |                            contains
+/workspace/common/src/parser.cpp:434:40: error: no header providing "std::move" is directly included [misc-include-cleaner,-warnings-as-errors]
+  434 |             scn.spheres.push_back(std::move(s));
+      |                                        ^
+/workspace/common/src/parser.cpp:437:20: error: variable 'testnum' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+  437 |             double testnum;
+      |                    ^      
+      |                            = NAN
+/workspace/common/src/parser.cpp:445:22: error: variable 'r' is not initialized [cppcoreguidelines-init-variables,-warnings-as-errors]
+  445 |               double r;
+      |                      ^
+      |                        = NAN
+/workspace/common/src/parser.cpp:471:20: error: implicit conversion 'size_type' (aka 'unsigned long') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  471 |               if (!mat_names.count(s.mat)) {
+      |                   ~^                     
+      |                                           == 0u
+/workspace/common/src/parser.cpp:471:30: error: use 'contains' to check for membership [readability-container-contains,-warnings-as-errors]
+  471 |               if (!mat_names.count(s.mat)) {
+      |                              ^~~~~
+      |                              contains
+/workspace/common/src/parser.cpp:506:31: error: '||' is a traditional token spelling, consider using an alternative token 'or' for consistency [readability-operators-representation,-warnings-as-errors]
+  506 |           if (c.height <= 0.0 || c.radius <= 0.0) {
+      |                               ^~
+      |                               or
+/workspace/common/src/parser.cpp:515:16: error: implicit conversion 'size_type' (aka 'unsigned long') -> 'bool' [readability-implicit-bool-conversion,-warnings-as-errors]
+  515 |           if (!mat_names.count(c.mat)) {
+      |               ~^                     
+      |                                       == 0u
+/workspace/common/src/parser.cpp:515:26: error: use 'contains' to check for membership [readability-container-contains,-warnings-as-errors]
+  515 |           if (!mat_names.count(c.mat)) {
+      |                          ^~~~~
+      |                          contains
+/workspace/common/src/parser.cpp:518:40: error: no header providing "std::move" is directly included [misc-include-cleaner,-warnings-as-errors]
+  518 |           scn.cylinders.push_back(std::move(c));
+      |                                        ^
+118747 warnings and 3 errors generated.
+Error while processing /workspace/common/src/parser.cpp.
+Suppressed 118663 warnings (118663 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+84 warnings treated as errors
+[27/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utcommon/test_camera.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++23 --coverage -fprofile-arcs -ftest-coverage -fprofile-generate -fprofile-update=atomic -MD -MT utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o -MF utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.d -fmodules-ts -fmodule-mapper=utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o -c /workspace/utcommon/test_camera.cpp
+FAILED: utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utcommon/test_camera.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++23 --coverage -fprofile-arcs -ftest-coverage -fprofile-generate -fprofile-update=atomic -MD -MT utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o -MF utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.d -fmodules-ts -fmodule-mapper=utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o -c /workspace/utcommon/test_camera.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/ray.hpp:7:18: error: initializer for member 'origin' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    7 |     vector origin{};
+      |                  ^~
+/workspace/common/include/render/ray.hpp:8:21: error: initializer for member 'direction' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    8 |     vector direction{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+/workspace/utcommon/test_camera.cpp:11:17: error: no header providing "std::abs" is directly included [misc-include-cleaner,-warnings-as-errors]
+    1 | #include <gtest/gtest.h>
+    2 | 
+    3 | #include "render/camera.hpp"
+    4 | #include "render/ray.hpp"
+    5 | #include "render/vector.hpp"
+    6 | 
+    7 | namespace {
+    8 | 
+    9 |   // Compara dos doubles con tolerancia.
+   10 |   bool approx(double a, double b, double eps = 1e-6) {
+   11 |     return std::abs(a - b) < eps;
+      |                 ^
+/workspace/utcommon/test_camera.cpp:16:34: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+   16 |     return approx(a.x, b.x, eps) && approx(a.y, b.y, eps) && approx(a.z, b.z, eps);
+      |                                  ^~
+      |                                  and
+/workspace/utcommon/test_camera.cpp:16:59: error: '&&' is a traditional token spelling, consider using an alternative token 'and' for consistency [readability-operators-representation,-warnings-as-errors]
+   16 |     return approx(a.x, b.x, eps) && approx(a.y, b.y, eps) && approx(a.z, b.z, eps);
+      |                                                           ^~
+      |                                                           and
+/workspace/utcommon/test_camera.cpp:23:8: error: no header providing "std::uint32_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+    1 |   std::uint32_t const width  = 400;
+      |        ^
+/workspace/utcommon/test_camera.cpp:30:8: error: no header providing "std::uint64_t" is directly included [misc-include-cleaner,-warnings-as-errors]
+   30 |   std::uint64_t const seed = 42ULL;
+      |        ^
+/workspace/utcommon/test_camera.cpp:32:3: error: variable 'cam' of type 'render::camera' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   32 |   render::camera cam(width, height, vfov, lookfrom, lookat, vup, spp, seed);
+      |   ^
+      |                  const 
+/workspace/utcommon/test_camera.cpp:40:3: error: variable 'cam_o' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   40 |   render::vector cam_o = cam.origin();
+      |   ^
+      |                  const 
+/workspace/utcommon/test_camera.cpp:62:3: error: variable 'r' of type 'render::ray' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   62 |   render::ray r = cam.get_ray(cx, cy, 0);
+      |   ^
+      |               const 
+/workspace/utcommon/test_camera.cpp:69:3: error: variable 'ideal_dir' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   69 |   render::vector ideal_dir = (lookat - lookfrom).normalized();
+      |   ^
+      |                  const 
+/workspace/utcommon/test_camera.cpp:102:3: error: variable 'r0' of type 'render::ray' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  102 |   render::ray r0 = cam.get_ray(px, py, 0);
+      |   ^
+      |               const 
+/workspace/utcommon/test_camera.cpp:103:3: error: variable 'r1' of type 'render::ray' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  103 |   render::ray r1 = cam.get_ray(px, py, 1);
+      |   ^
+      |               const 
+/workspace/utcommon/test_camera.cpp:111:3: error: variable 'dx' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  111 |   double dx = std::abs(r0.direction.x - r1.direction.x);
+      |   ^
+      |          const 
+/workspace/utcommon/test_camera.cpp:112:3: error: variable 'dy' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  112 |   double dy = std::abs(r0.direction.y - r1.direction.y);
+      |   ^
+      |          const 
+/workspace/utcommon/test_camera.cpp:113:3: error: variable 'dz' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  113 |   double dz = std::abs(r0.direction.z - r1.direction.z);
+      |   ^
+      |          const 
+/workspace/utcommon/test_camera.cpp:115:3: error: variable 'diff' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+  115 |   double diff = dx + dy + dz;
+      |   ^
+      |          const 
+153048 warnings and 3 errors generated.
+Error while processing /workspace/utcommon/test_camera.cpp.
+Suppressed 153044 warnings (153030 in non-user code, 14 NOLINT).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+18 warnings treated as errors
+[28/34] /usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utcommon/test_vector.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++23 --coverage -fprofile-arcs -ftest-coverage -fprofile-generate -fprofile-update=atomic -MD -MT utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o -MF utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.d -fmodules-ts -fmodule-mapper=utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o -c /workspace/utcommon/test_vector.cpp
+FAILED: utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o 
+/usr/bin/cmake -E __run_co_compile --tidy="/usr/bin/clang-tidy-20;--header-filter=.*;--extra-arg-before=--driver-mode=g++" --source=/workspace/utcommon/test_vector.cpp -- /usr/bin/c++ -DCMAKE_INTDIR=\"Release\" -I/workspace/common/include -isystem /workspace/out/build/clang-tidy/_deps/gsl-src/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest/include -isystem /workspace/out/build/clang-tidy/_deps/googletest-src/googletest -O3 -DNDEBUG -std=gnu++23 --coverage -fprofile-arcs -ftest-coverage -fprofile-generate -fprofile-update=atomic -MD -MT utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o -MF utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.d -fmodules-ts -fmodule-mapper=utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.modmap -MD -fdeps-format=p1689r5 -x c++ -o utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o -c /workspace/utcommon/test_vector.cpp
+error: unknown argument: '-fdeps-format=p1689r5' [clang-diagnostic-error]
+error: unknown argument: '-fmodule-mapper=utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o.modmap' [clang-diagnostic-error]
+error: unknown argument: '-fmodules-ts' [clang-diagnostic-error]
+/workspace/common/include/render/ray.hpp:7:18: error: initializer for member 'origin' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    7 |     vector origin{};
+      |                  ^~
+/workspace/common/include/render/ray.hpp:8:21: error: initializer for member 'direction' is redundant [readability-redundant-member-init,-warnings-as-errors]
+    8 |     vector direction{};
+      |                     ^~
+/workspace/common/include/render/vector.hpp:63:17: error: function 'operator*' has inline specifier but is implicitly inlined [readability-redundant-inline-specifier,-warnings-as-errors]
+   63 |   [[nodiscard]] inline constexpr vector operator*(double s, vector const & v) {
+      |                 ^~~~~~
+/workspace/utcommon/test_vector.cpp:7:3: error: variable 'a' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+    7 |   render::vector a{1.0, 2.0, 3.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:8:3: error: variable 'b' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+    8 |   render::vector b{0.5, -1.0, 4.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:10:3: error: variable 'sum' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   10 |   render::vector sum = a + b;
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:15:3: error: variable 'diff' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   15 |   render::vector diff = a - b;
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:22:3: error: variable 'a' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   22 |   render::vector a{1.0, 2.0, 3.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:23:3: error: variable 'b' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   23 |   render::vector b{4.0, -5.0, 6.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:25:3: error: variable 'd' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   25 |   double d = a.dot(b);
+      |   ^
+      |          const 
+/workspace/utcommon/test_vector.cpp:31:3: error: variable 'a' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   31 |   render::vector a{1.0, 0.0, 0.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:32:3: error: variable 'b' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   32 |   render::vector b{0.0, 1.0, 0.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:34:3: error: variable 'c' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   34 |   render::vector c = a.cross(b);
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:42:3: error: variable 'a' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   42 |   render::vector a{3.0, 4.0, 0.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:46:3: error: variable 'n' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   46 |   render::vector n = a.normalized();
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:48:3: error: variable 'len_n' of type 'double' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   48 |   double len_n = n.magnitude();
+      |   ^
+      |          const 
+/workspace/utcommon/test_vector.cpp:58:3: error: variable 'origin' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   58 |   render::vector origin{1.0, 2.0, 3.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:59:3: error: variable 'dir' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   59 |   render::vector dir{0.0, 1.0, 0.0};
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:61:3: error: variable 'r' of type 'render::ray' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   61 |   render::ray r(origin, dir);
+      |   ^
+      |               const 
+/workspace/utcommon/test_vector.cpp:64:3: error: variable 'p0' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   64 |   render::vector p0 = r.at(0.0);
+      |   ^
+      |                  const 
+/workspace/utcommon/test_vector.cpp:69:3: error: variable 'p1' of type 'render::vector' can be declared 'const' [misc-const-correctness,-warnings-as-errors]
+   69 |   render::vector p1 = r.at(5.0);
+      |   ^
+      |                  const 
+144523 warnings and 3 errors generated.
+Error while processing /workspace/utcommon/test_vector.cpp.
+Suppressed 144516 warnings (144502 in non-user code, 14 NOLINT).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+21 warnings treated as errors
+ninja: build stopped: cannot make progress due to previous errors.

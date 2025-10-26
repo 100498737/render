@@ -1,2 +1,5 @@
 #include "render/image_soa.hpp"
-namespace render { /* all inline in header */ }
+
+namespace render { /* all inline in header */
+
+}

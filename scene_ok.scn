@@ -1,2 +1,2 @@
-matte red color 1 0 0
-sphere s1 0 0 -1 0.5 red
+material matte red color=1,0,0
+sphere s1 center=0,0,-1 radius=0.5 mat=red

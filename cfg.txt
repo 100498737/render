@@ -1,8 +1,8 @@
 width  200
-height 100
-fov    45
+height 120
+fov 60
 samples 1
-seed   1
+seed 1234
 lookfrom 0 0 1
 lookat   0 0 0
 vup      0 1 0
