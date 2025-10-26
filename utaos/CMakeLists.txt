@@ -1,16 +1,7 @@
-set(COMMON_SRC_FILES 
-  #"${CMAKE_SOURCE_DIR}/aos/src/file1.cpp"
+add_executable(utaos test_image_aos.cpp)
+target_include_directories(utaos PRIVATE
+  ${CMAKE_SOURCE_DIR}/aos/include
+  ${CMAKE_SOURCE_DIR}/common/include
 )
-
-set(CURRENT_DIR_SRC_FILES 
-  "${CMAKE_CURRENT_SOURCE_DIR}/test_vector.cpp"
-)
-
-# add_unit_test_target(
-#   TARGET_NAME utaos
-#   SOURCE_FILES ${COMMON_SRC_FILES} ${CURRENT_DIR_SRC_FILES}
-#   LIBRARY_FILTER aos
-#   COVERAGE_DIR coverage-aos
-#   LIBRARY_TO_LINK common
-#   INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/aos/include
-# )
+target_link_libraries(utaos PRIVATE GTest::gtest_main)
+add_test(NAME utaos COMMAND $<TARGET_FILE:utaos>)
