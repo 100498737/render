@@ -1,13 +1,18 @@
-set(CURRENT_DIR_SRC_FILES
-  "${CMAKE_CURRENT_SOURCE_DIR}/test_vector.cpp"
+# utcommon/CMakeLists.txt
+add_executable(utcommon
+  test_vector.cpp
+  test_camera.cpp
+  test_config.cpp
+  test_hits.cpp
 )
 
-add_unit_test_target(
-  TARGET_NAME utcommon
-  SOURCE_FILES
-    test_vector.cpp
-    test_camera.cpp
-  LIBRARY_FILTER common
-  COVERAGE_DIR coverage-common
-  LIBRARY_TO_LINK common
+target_include_directories(utcommon PRIVATE
+  ${CMAKE_SOURCE_DIR}/common/include
 )
+
+target_link_libraries(utcommon PRIVATE
+  common
+  GTest::gtest_main
+)
+
+add_test(NAME utcommon COMMAND utcommon)

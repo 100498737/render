@@ -7,6 +7,7 @@ target_sources(common
     src/parser.cpp
     src/scene.cpp
     src/ppm.cpp
+    src/hits.cpp
 )
 
 target_include_directories(common

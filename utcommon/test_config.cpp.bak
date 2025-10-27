@@ -1,0 +1,52 @@
+#include "render/parser.hpp"
+#include "render/config.hpp"
+#include <fstream>
+#include <gtest/gtest.h>
+
+using render::Config;
+
+TEST(Config, OpensAndParsesMinimal) {
+  // Creamos un cfg temporal
+  char const * path = "tmp_cfg_ok.txt";
+  std::ofstream(path) << "# minimal cfg\n"
+                      << "width 800\n"
+                      << "height 450\n"
+                      << "samples 32\n"
+                      << "seed 1234\n"
+                      << "lookfrom 0 0 1
+vup 0 1 0
+lookat 0 0 0
+fov 60\n";
+
+  std::string err;
+  auto got = render::render::render::render::render::try_parse_config(path, &err);
+  ASSERT_TRUE(got.has_value()) << err;
+  EXPECT_EQ(got->width, 800);
+  EXPECT_EQ(got->height, 450u);
+  EXPECT_EQ(got->samples_per_pixel, 32);
+}
+
+TEST(Config, MissingFile) {
+  std::string err;
+  auto bad = render::render::render::render::render::try_parse_config("___nope___.cfg", &err);
+  EXPECT_FALSE(bad.has_value());
+  EXPECT_FALSE(err.empty());
+}
+
+TEST(Config, UnknownKey) {
+  char const * path = "tmp_cfg_badkey.txt";
+  std::ofstream(path) << "foo=42\n";
+  std::string err;
+  auto bad = render::render::render::render::render::try_parse_config(path, &err);
+  EXPECT_FALSE(bad.has_value());
+  EXPECT_NE(err.find("unknown key"), std::string::npos);
+}
+
+TEST(Config, InvalidValue) {
+  char const * path = "tmp_cfg_badval.txt";
+  std::ofstream(path) << "image_width=abc\n";
+  std::string err;
+  auto bad = render::render::render::render::render::try_parse_config(path, &err);
+  EXPECT_FALSE(bad.has_value());
+  EXPECT_NE(err.find("invalid"), std::string::npos);
+}
