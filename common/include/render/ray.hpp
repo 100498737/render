@@ -4,8 +4,8 @@
 namespace render {
 
   struct ray {
-    vector origin{};
-    vector direction{};
+    vector origin;
+    vector direction;
 
     constexpr ray() = default;
 

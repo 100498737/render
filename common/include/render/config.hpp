@@ -1,10 +1,7 @@
 #pragma once
 
-#include <cstdint>
-#include <optional>
-#include <string>
-
 #include "render/vector.hpp"
+#include <cstdint>
 
 namespace render {
 
@@ -26,6 +23,10 @@ namespace render {
     Vec3 vup{
       Vec3{0.0, 1.0, 0.0}
     };
+
+    double aperture{0.0};    // diámetro efectivo del diafragma (0 => pinhole)
+    double focus_dist{1.0};  // distancia de enfoque ( > 0 )
+    int max_depth{5};        // rebotes máximos del path ( >= 1 )
 
     // Muestreo y RNG
     std::uint32_t samples_per_pixel{4};

@@ -7,31 +7,39 @@
 namespace render {
 
   struct ImageSOA {
-    int width{}, height{};
-    std::vector<std::uint8_t> R, G, B;
+    int width, height;
+    std::vector<uint8_t> R, G, B;
 
-    ImageSOA(int w, int h) : width(w), height(h), R(w * h, 0), G(w * h, 0), B(w * h, 0) { }
-
-    inline int idx(int x, int y) const { return y * width + x; }
-
-    void set(int x, int y, std::uint8_t r, std::uint8_t g, std::uint8_t b) {
-      int const i = idx(x, y);
-      R[i]        = r;
-      G[i]        = g;
-      B[i]        = b;
+    explicit ImageSOA(int w, int h) : width(w), height(h) {
+      std::size_t const n = static_cast<std::size_t>(w) * static_cast<std::size_t>(h);
+      R.assign(n, 0);
+      G.assign(n, 0);
+      B.assign(n, 0);
     }
 
-    void get(int x, int y, std::uint8_t & r, std::uint8_t & g, std::uint8_t & b) const {
-      int const i = idx(x, y);
-      r           = R[i];
-      g           = G[i];
-      b           = B[i];
+    inline std::size_t index(int x, int y) const {
+      return static_cast<std::size_t>(y) * static_cast<std::size_t>(width) +
+             static_cast<std::size_t>(x);
     }
 
-    static std::uint8_t clamp01_to_u8(double v) {
-      v      = std::clamp(v, 0.0, 1.0);
-      int vi = (int) std::lround(v * 255.0);
-      return (std::uint8_t) std::clamp(vi, 0, 255);
+    void set(int x, int y, uint8_t r, uint8_t g, uint8_t b) {
+      std::size_t const i = index(x, y);
+      R[i]                = r;
+      G[i]                = g;
+      B[i]                = b;
+    }
+
+    void get(int x, int y, uint8_t & r, uint8_t & g, uint8_t & b) const {
+      std::size_t const i = index(x, y);
+      r                   = R[i];
+      g                   = G[i];
+      b                   = B[i];
+    }
+
+    static uint8_t clamp01_to_u8(double v) {
+      v            = std::clamp(v, 0.0, 1.0);
+      int const vi = static_cast<int>(std::lround(v * 255.0));
+      return static_cast<uint8_t>(std::clamp(vi, 0, 255));
     }
 
     void set01(int x, int y, double r, double g, double b) {

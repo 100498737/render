@@ -14,9 +14,15 @@ namespace render {
     int width{}, height{};
     std::vector<Pixel> data;
 
-    ImageAOS(int w, int h) : width(w), height(h), data(w * h) { }
+    explicit ImageAOS(int w, int h) : width(w), height(h) {
+      std::size_t const n = static_cast<std::size_t>(w) * static_cast<std::size_t>(h);
+      data.assign(n, Pixel{0, 0, 0});
+    }
 
-    inline int idx(int x, int y) const { return y * width + x; }
+    [[nodiscard]] std::size_t idx(int x, int y) const {
+      return static_cast<std::size_t>(y) * static_cast<std::size_t>(width) +
+             static_cast<std::size_t>(x);
+    }
 
     void set(int x, int y, std::uint8_t r, std::uint8_t g, std::uint8_t b) {
       data[idx(x, y)] = Pixel{r, g, b};
@@ -30,9 +36,9 @@ namespace render {
     }
 
     static std::uint8_t clamp01_to_u8(double v) {
-      v      = std::clamp(v, 0.0, 1.0);
-      int vi = (int) std::lround(v * 255.0);
-      return (std::uint8_t) std::clamp(vi, 0, 255);
+      v            = std::clamp(v, 0.0, 1.0);
+      int const vi = static_cast<int>(std::lround(v * 255.0));
+      return static_cast<std::uint8_t>(std::clamp(vi, 0, 255));
     }
 
     void set01(int x, int y, double r, double g, double b) {

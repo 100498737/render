@@ -13,7 +13,7 @@ namespace {
 
   // Compara dos vectores con tolerancia.
   bool approx_vec(render::vector const & a, render::vector const & b, double eps = 1e-6) {
-    return approx(a.x, b.x, eps) && approx(a.y, b.y, eps) && approx(a.z, b.z, eps);
+    return approx(a.x, b.x, eps) and approx(a.y, b.y, eps) and approx(a.z, b.z, eps);
   }
 
 }  // namespace

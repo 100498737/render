@@ -1,0 +1,5 @@
+# materiales
+matte red color 1,0,0
+
+# objetos
+sphere ball center=0,0,0 radius=1 mat=red

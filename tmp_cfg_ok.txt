@@ -1,6 +1,9 @@
 # minimal cfg
-image_width=800
-aspect_ratio=1.7777777778
-samples_per_pixel=32
-max_depth=8
-gamma=2.2
+width 800
+height 450
+fov 60
+samples 32
+seed 1234
+lookfrom 0 0 1
+lookat 0 0 0
+vup 0 1 0

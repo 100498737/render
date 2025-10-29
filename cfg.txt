@@ -1,8 +1,9 @@
-width  200
-height 120
+# minimal cfg
+width 128
+height 128
 fov 60
 samples 1
-seed 1234
-lookfrom 0 0 1
+seed 42
+lookfrom 0 0 5
 lookat   0 0 0
 vup      0 1 0

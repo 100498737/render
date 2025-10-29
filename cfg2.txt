@@ -1,0 +1,11 @@
+image_width 128
+image_height 128
+vfov 45
+samples_per_pixel 2
+rng_seed 7
+camera_from 0 1 5
+camera_at   0 0 0
+camera_up   0 1 0
+aperture 0.1
+focus_dist 5.0
+max_depth 10

@@ -6,12 +6,11 @@
 #include "render/parser.hpp"
 #include "render/vector.hpp"
 
-using render::Config;
-
 TEST(Config, OpensAndParsesMinimal) {
   char const * path = "tmp_cfg_ok.txt";
   std::ofstream cfg(path);
-  cfg << "width 800\n"
+  cfg << "# minimal cfg\n"
+      << "width 800\n"
       << "height 450\n"
       << "fov 60\n"
       << "samples 32\n"
@@ -25,11 +24,11 @@ TEST(Config, OpensAndParsesMinimal) {
   auto got = render::try_parse_config(path, &err);
   ASSERT_TRUE(got.has_value()) << err;
 
-  EXPECT_EQ(got->width, 800u);
-  EXPECT_EQ(got->height, 450u);
+  EXPECT_EQ(got->width, 800U);
+  EXPECT_EQ(got->height, 450U);
   EXPECT_NEAR(got->vertical_fov_deg, 60.0, 1e-12);
-  EXPECT_EQ(got->samples_per_pixel, 32u);
-  EXPECT_EQ(got->seed, 1'234u);
+  EXPECT_EQ(got->samples_per_pixel, 32U);
+  EXPECT_EQ(got->seed, 1'234U);
 
   EXPECT_DOUBLE_EQ(got->lookfrom.x, 0.0);
   EXPECT_DOUBLE_EQ(got->lookfrom.y, 0.0);
@@ -57,6 +56,7 @@ TEST(Config, UnknownKey) {
   std::string err;
   auto bad = render::try_parse_config(path, &err);
   EXPECT_FALSE(bad.has_value());
+  // Tu parser emite "Error: invalid key 'foo' in ..."
   EXPECT_NE(err.find("invalid key"), std::string::npos);
 }
 
@@ -66,5 +66,6 @@ TEST(Config, InvalidValue) {
   std::string err;
   auto bad = render::try_parse_config(path, &err);
   EXPECT_FALSE(bad.has_value());
+  // Tu parser emite "Error: invalid format for 'width' in ..."
   EXPECT_NE(err.find("invalid format"), std::string::npos);
 }
