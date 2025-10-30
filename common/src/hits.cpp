@@ -120,6 +120,77 @@ namespace render {
       return true;
     }
 
+    // ==== TAPA INFERIOR (plano en la base) ====
+    // Usa solo nombres que existen en tu firma: base, axis, radius, t_min, t_max, *t_hit, *n_hit.
+    {
+      // Ojo: adapta estos dos si en tu ray son r.orig / r.dir en vez de r.origin / r.direction
+      render::vector const & o = r.origin;
+      render::vector const & d = r.direction;
+
+      render::vector const p0 = base;  // centro de la tapa inferior
+      render::vector const n  = axis;  // normal de la tapa (asumo axis normalizado)
+
+      double const denom = n.dot(d);  // si tu vector no tiene .dot, usa (n * d) si lo sobrecargaste
+      if (std::abs(denom) > 1e-12) {
+        double const t = (p0 - o).dot(n) / denom;
+        if (t >= t_min and t <= t_max) {
+          render::vector const p = o + d * t;
+
+          // ¿p está dentro del disco de radio 'radius'?
+          // Quita la componente paralela a 'axis' y mide la longitud de la perpendicular.
+          render::vector const v      = p - p0;
+          render::vector const v_perp = v - n * v.dot(n);
+          double const r2             = v_perp.dot(v_perp);
+
+          if (r2 <= radius * radius + 1e-12) {
+            // Si es el más cercano, actualiza salida
+            if (t < *t_out) {
+              *t_out      = t;
+              *normal_out = n;  // normal de la tapa inferior
+              // Orienta normal contra el rayo (convención habitual)
+              if (normal_out->dot(d) > 0.0) {
+                *normal_out = (*normal_out) * (-1.0);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // ==== TAPA SUPERIOR (plano en la parte alta) ====
+    // p0_top = base + height * axis
+    {
+      render::vector const & o = r.origin;
+      render::vector const & d = r.direction;
+
+      render::vector const p0_top = base + axis * height;  // centro de la tapa superior
+      render::vector const n_top  = axis * (-1.0);  // normal hacia fuera (opuesta a la inferior)
+
+      double const denom = n_top.dot(d);
+      if (std::abs(denom) > 1e-12) {
+        double const t = (p0_top - o).dot(n_top) / denom;
+        if (t >= t_min and t <= t_max) {
+          render::vector const p = o + d * t;
+
+          // Dentro del disco de radio 'radius'?
+          render::vector const v      = p - p0_top;
+          render::vector const v_perp = v - axis * v.dot(axis);
+          double const r2             = v_perp.dot(v_perp);
+
+          if (r2 <= radius * radius + 1e-12) {
+            if (t < *t_out) {
+              *t_out      = t;
+              *normal_out = n_top;
+              // orienta la normal contra el rayo (convención)
+              if (normal_out->dot(d) > 0.0) {
+                *normal_out = (*normal_out) * (-1.0);
+              }
+            }
+          }
+        }
+      }
+    }
+
     return false;
   }
 

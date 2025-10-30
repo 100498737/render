@@ -10,27 +10,19 @@ namespace render {
 
   class camera {
   public:
-    // Crea una cámara pinhole (sin DOF todavía).
-    //
-    // image_width, image_height: resolución en píxeles
-    // vfov_deg: FOV vertical en grados
-    // lookfrom: posición de la cámara en mundo
-    // lookat:   punto al que mira la cámara
-    // vup:      "up" aproximado del usuario (para construir el sistema u,v,w)
-    // samples_per_pixel: número de rayos distintos por píxel
-    // seed: semilla para RNG (reproducible)
+    // EXISTENTE: pinhole (compatibilidad).
     camera(std::uint32_t image_width, std::uint32_t image_height, double vfov_deg,
            vector const & lookfrom, vector const & lookat, vector const & vup,
            std::uint32_t samples_per_pixel, std::uint64_t seed);
 
-    // Genera el rayo primario (con jitter) para el píxel (px, py) y el índice de
-    // muestra "sample_id" en [0, samples_per_pixel).
-    //
-    // Nota: el origen del rayo siempre es la cámara (pinhole). La dirección
-    // apunta hacia el punto subpixel muestreado en el plano de imagen.
+    // NUEVO: DOF (aperture + focus_dist). Mantén la misma firma pero añadiendo estos dos params.
+    camera(std::uint32_t image_width, std::uint32_t image_height, double vfov_deg,
+           vector const & lookfrom, vector const & lookat, vector const & vup,
+           std::uint32_t samples_per_pixel, std::uint64_t seed, double aperture,
+           double focus_dist);  // <-- NUEVO
+
     [[nodiscard]] ray get_ray(std::uint32_t px, std::uint32_t py, std::uint32_t sample_id);
 
-    // Getters útiles para tests / depuración
     [[nodiscard]] std::uint32_t image_width() const { return m_image_width; }
 
     [[nodiscard]] std::uint32_t image_height() const { return m_image_height; }
@@ -60,6 +52,10 @@ namespace render {
     // RNG por cámara (reproducible)
     std::mt19937_64 m_rng;
     std::uniform_real_distribution<double> m_dist;
+
+    // ===== NUEVO (para DOF) =====
+    double m_lens_radius{0.0};  // = aperture/2, 0 => pinhole
+    vector m_u, m_v, m_w;       // base de cámara para desplazar el origen en la lente
   };
 
 }  // namespace render
