@@ -1,0 +1,1 @@
+OK: wrote out_soa.ppm

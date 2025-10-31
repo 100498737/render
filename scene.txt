@@ -1,5 +1,5 @@
 # materiales
-matte red color 1,0,0
+matte red color=0.8,0.2,0.2
 
 # objetos
-sphere ball center=0,0,0 radius=1 mat=red
+sphere ball center=0,0,0 radius=0.5 mat=red
