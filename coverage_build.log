@@ -1,0 +1,140 @@
+Change Dir: '/workspace/out/build/coverage'
+
+Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j
+/usr/bin/cmake -S/workspace -B/workspace/out/build/coverage --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /workspace/out/build/coverage/CMakeFiles /workspace/out/build/coverage//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/workspace/out/build/coverage'
+/usr/bin/gmake  -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
+/usr/bin/gmake  -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/depend
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/common /workspace/out/build/coverage /workspace/out/build/coverage/common /workspace/out/build/coverage/common/CMakeFiles/common.dir/DependInfo.cmake "--color="
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/out/build/coverage/_deps/googletest-src/googletest /workspace/out/build/coverage /workspace/out/build/coverage/_deps/googletest-build/googletest /workspace/out/build/coverage/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+/usr/bin/gmake  -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+/usr/bin/gmake  -f common/CMakeFiles/common.dir/build.make common/CMakeFiles/common.dir/build
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+[ 11%] Building CXX object common/CMakeFiles/common.dir/src/camera.cpp.o
+[ 11%] Building CXX object common/CMakeFiles/common.dir/src/config.cpp.o
+cd /workspace/out/build/coverage/common && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/src/camera.cpp.o -MF CMakeFiles/common.dir/src/camera.cpp.o.d -o CMakeFiles/common.dir/src/camera.cpp.o -c /workspace/common/src/camera.cpp
+cd /workspace/out/build/coverage/common && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/src/config.cpp.o -MF CMakeFiles/common.dir/src/config.cpp.o.d -o CMakeFiles/common.dir/src/config.cpp.o -c /workspace/common/src/config.cpp
+[ 15%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+cd /workspace/out/build/coverage/_deps/googletest-build/googletest && /usr/bin/c++  -I/workspace/out/build/coverage/_deps/googletest-src/googletest/include -I/workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -MD -MT _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -MF CMakeFiles/gtest.dir/src/gtest-all.cc.o.d -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /workspace/out/build/coverage/_deps/googletest-src/googletest/src/gtest-all.cc
+[ 26%] Building CXX object common/CMakeFiles/common.dir/src/parser.cpp.o
+[ 26%] Building CXX object common/CMakeFiles/common.dir/src/ppm.cpp.o
+cd /workspace/out/build/coverage/common && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/src/parser.cpp.o -MF CMakeFiles/common.dir/src/parser.cpp.o.d -o CMakeFiles/common.dir/src/parser.cpp.o -c /workspace/common/src/parser.cpp
+[ 26%] Building CXX object common/CMakeFiles/common.dir/src/hits.cpp.o
+cd /workspace/out/build/coverage/common && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/src/ppm.cpp.o -MF CMakeFiles/common.dir/src/ppm.cpp.o.d -o CMakeFiles/common.dir/src/ppm.cpp.o -c /workspace/common/src/ppm.cpp
+[ 26%] Building CXX object common/CMakeFiles/common.dir/src/scene.cpp.o
+cd /workspace/out/build/coverage/common && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/src/scene.cpp.o -MF CMakeFiles/common.dir/src/scene.cpp.o.d -o CMakeFiles/common.dir/src/scene.cpp.o -c /workspace/common/src/scene.cpp
+cd /workspace/out/build/coverage/common && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -Wall -Wextra -Werror -pedantic -pedantic-errors -Wconversion -Wsign-conversion -MD -MT common/CMakeFiles/common.dir/src/hits.cpp.o -MF CMakeFiles/common.dir/src/hits.cpp.o.d -o CMakeFiles/common.dir/src/hits.cpp.o -c /workspace/common/src/hits.cpp
+[ 30%] Linking CXX static library libcommon.a
+cd /workspace/out/build/coverage/common && /usr/bin/cmake -P CMakeFiles/common.dir/cmake_clean_target.cmake
+cd /workspace/out/build/coverage/common && /usr/bin/cmake -E cmake_link_script CMakeFiles/common.dir/link.txt --verbose=1
+/usr/bin/ar qc libcommon.a CMakeFiles/common.dir/src/camera.cpp.o CMakeFiles/common.dir/src/config.cpp.o CMakeFiles/common.dir/src/parser.cpp.o CMakeFiles/common.dir/src/scene.cpp.o CMakeFiles/common.dir/src/ppm.cpp.o CMakeFiles/common.dir/src/hits.cpp.o
+/usr/bin/ranlib libcommon.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 30%] Built target common
+/usr/bin/gmake  -f aos/CMakeFiles/render-aos.dir/build.make aos/CMakeFiles/render-aos.dir/depend
+/usr/bin/gmake  -f soa/CMakeFiles/render-soa.dir/build.make soa/CMakeFiles/render-soa.dir/depend
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/aos /workspace/out/build/coverage /workspace/out/build/coverage/aos /workspace/out/build/coverage/aos/CMakeFiles/render-aos.dir/DependInfo.cmake "--color="
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/soa /workspace/out/build/coverage /workspace/out/build/coverage/soa /workspace/out/build/coverage/soa/CMakeFiles/render-soa.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+/usr/bin/gmake  -f aos/CMakeFiles/render-aos.dir/build.make aos/CMakeFiles/render-aos.dir/build
+/usr/bin/gmake  -f soa/CMakeFiles/render-soa.dir/build.make soa/CMakeFiles/render-soa.dir/build
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+[ 34%] Building CXX object aos/CMakeFiles/render-aos.dir/src/main.cpp.o
+cd /workspace/out/build/coverage/aos && /usr/bin/c++  -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT aos/CMakeFiles/render-aos.dir/src/main.cpp.o -MF CMakeFiles/render-aos.dir/src/main.cpp.o.d -o CMakeFiles/render-aos.dir/src/main.cpp.o -c /workspace/aos/src/main.cpp
+[ 38%] Building CXX object soa/CMakeFiles/render-soa.dir/src/main.cpp.o
+cd /workspace/out/build/coverage/soa && /usr/bin/c++  -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT soa/CMakeFiles/render-soa.dir/src/main.cpp.o -MF CMakeFiles/render-soa.dir/src/main.cpp.o.d -o CMakeFiles/render-soa.dir/src/main.cpp.o -c /workspace/soa/src/main.cpp
+[ 42%] Linking CXX executable render-soa
+cd /workspace/out/build/coverage/soa && /usr/bin/cmake -E cmake_link_script CMakeFiles/render-soa.dir/link.txt --verbose=1
+/usr/bin/c++ --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wl,--dependency-file=CMakeFiles/render-soa.dir/link.d "CMakeFiles/render-soa.dir/src/main.cpp.o" -o render-soa  ../common/libcommon.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 42%] Built target render-soa
+[ 46%] Linking CXX executable render-aos
+cd /workspace/out/build/coverage/aos && /usr/bin/cmake -E cmake_link_script CMakeFiles/render-aos.dir/link.txt --verbose=1
+/usr/bin/c++ --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wl,--dependency-file=CMakeFiles/render-aos.dir/link.d "CMakeFiles/render-aos.dir/src/main.cpp.o" -o render-aos  ../common/libcommon.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 46%] Built target render-aos
+[ 50%] Linking CXX static library ../../../lib/libgtest.a
+cd /workspace/out/build/coverage/_deps/googletest-build/googletest && /usr/bin/cmake -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
+cd /workspace/out/build/coverage/_deps/googletest-build/googletest && /usr/bin/cmake -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=1
+/usr/bin/ar qc ../../../lib/libgtest.a "CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+/usr/bin/ranlib ../../../lib/libgtest.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 50%] Built target gtest
+/usr/bin/gmake  -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/out/build/coverage/_deps/googletest-src/googletest /workspace/out/build/coverage /workspace/out/build/coverage/_deps/googletest-build/googletest /workspace/out/build/coverage/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+/usr/bin/gmake  -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+[ 53%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+cd /workspace/out/build/coverage/_deps/googletest-build/googletest && /usr/bin/c++  -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -MD -MT _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -MF CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /workspace/out/build/coverage/_deps/googletest-src/googletest/src/gtest_main.cc
+[ 57%] Linking CXX static library ../../../lib/libgtest_main.a
+cd /workspace/out/build/coverage/_deps/googletest-build/googletest && /usr/bin/cmake -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+cd /workspace/out/build/coverage/_deps/googletest-build/googletest && /usr/bin/cmake -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=1
+/usr/bin/ar qc ../../../lib/libgtest_main.a CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+/usr/bin/ranlib ../../../lib/libgtest_main.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 57%] Built target gtest_main
+/usr/bin/gmake  -f utcommon/CMakeFiles/utcommon.dir/build.make utcommon/CMakeFiles/utcommon.dir/depend
+/usr/bin/gmake  -f utsoa/CMakeFiles/utsoa.dir/build.make utsoa/CMakeFiles/utsoa.dir/depend
+/usr/bin/gmake  -f utaos/CMakeFiles/utaos.dir/build.make utaos/CMakeFiles/utaos.dir/depend
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/utcommon /workspace/out/build/coverage /workspace/out/build/coverage/utcommon /workspace/out/build/coverage/utcommon/CMakeFiles/utcommon.dir/DependInfo.cmake "--color="
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/utaos /workspace/out/build/coverage /workspace/out/build/coverage/utaos /workspace/out/build/coverage/utaos/CMakeFiles/utaos.dir/DependInfo.cmake "--color="
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+cd /workspace/out/build/coverage && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /workspace /workspace/utsoa /workspace/out/build/coverage /workspace/out/build/coverage/utsoa /workspace/out/build/coverage/utsoa/CMakeFiles/utsoa.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+/usr/bin/gmake  -f utsoa/CMakeFiles/utsoa.dir/build.make utsoa/CMakeFiles/utsoa.dir/build
+/usr/bin/gmake  -f utaos/CMakeFiles/utaos.dir/build.make utaos/CMakeFiles/utaos.dir/build
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+/usr/bin/gmake  -f utcommon/CMakeFiles/utcommon.dir/build.make utcommon/CMakeFiles/utcommon.dir/build
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+gmake[2]: Entering directory '/workspace/out/build/coverage'
+[ 61%] Building CXX object utsoa/CMakeFiles/utsoa.dir/test_image_soa.cpp.o
+cd /workspace/out/build/coverage/utsoa && /usr/bin/c++  -I/workspace/soa/include -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -MD -MT utsoa/CMakeFiles/utsoa.dir/test_image_soa.cpp.o -MF CMakeFiles/utsoa.dir/test_image_soa.cpp.o.d -o CMakeFiles/utsoa.dir/test_image_soa.cpp.o -c /workspace/utsoa/test_image_soa.cpp
+[ 69%] Building CXX object utcommon/CMakeFiles/utcommon.dir/test_vector.cpp.o
+cd /workspace/out/build/coverage/utcommon && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT utcommon/CMakeFiles/utcommon.dir/test_vector.cpp.o -MF CMakeFiles/utcommon.dir/test_vector.cpp.o.d -o CMakeFiles/utcommon.dir/test_vector.cpp.o -c /workspace/utcommon/test_vector.cpp
+[ 69%] Building CXX object utaos/CMakeFiles/utaos.dir/test_image_aos.cpp.o
+cd /workspace/out/build/coverage/utaos && /usr/bin/c++  -I/workspace/aos/include -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -MD -MT utaos/CMakeFiles/utaos.dir/test_image_aos.cpp.o -MF CMakeFiles/utaos.dir/test_image_aos.cpp.o.d -o CMakeFiles/utaos.dir/test_image_aos.cpp.o -c /workspace/utaos/test_image_aos.cpp
+[ 84%] Building CXX object utcommon/CMakeFiles/utcommon.dir/test_config.cpp.o
+[ 84%] Building CXX object utcommon/CMakeFiles/utcommon.dir/test_camera.cpp.o
+cd /workspace/out/build/coverage/utcommon && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT utcommon/CMakeFiles/utcommon.dir/test_camera.cpp.o -MF CMakeFiles/utcommon.dir/test_camera.cpp.o.d -o CMakeFiles/utcommon.dir/test_camera.cpp.o -c /workspace/utcommon/test_camera.cpp
+[ 84%] Building CXX object utcommon/CMakeFiles/utcommon.dir/test_misc.cpp.o
+cd /workspace/out/build/coverage/utcommon && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT utcommon/CMakeFiles/utcommon.dir/test_config.cpp.o -MF CMakeFiles/utcommon.dir/test_config.cpp.o.d -o CMakeFiles/utcommon.dir/test_config.cpp.o -c /workspace/utcommon/test_config.cpp
+cd /workspace/out/build/coverage/utcommon && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT utcommon/CMakeFiles/utcommon.dir/test_misc.cpp.o -MF CMakeFiles/utcommon.dir/test_misc.cpp.o.d -o CMakeFiles/utcommon.dir/test_misc.cpp.o -c /workspace/utcommon/test_misc.cpp
+[ 84%] Building CXX object utcommon/CMakeFiles/utcommon.dir/test_hits.cpp.o
+cd /workspace/out/build/coverage/utcommon && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT utcommon/CMakeFiles/utcommon.dir/test_hits.cpp.o -MF CMakeFiles/utcommon.dir/test_hits.cpp.o.d -o CMakeFiles/utcommon.dir/test_hits.cpp.o -c /workspace/utcommon/test_hits.cpp
+[ 88%] Building CXX object utcommon/CMakeFiles/utcommon.dir/test_parser_scene.cpp.o
+cd /workspace/out/build/coverage/utcommon && /usr/bin/c++  -I/workspace/common/include -isystem /workspace/out/build/coverage/_deps/gsl-src/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest/include -isystem /workspace/out/build/coverage/_deps/googletest-src/googletest --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -std=gnu++23 -MD -MT utcommon/CMakeFiles/utcommon.dir/test_parser_scene.cpp.o -MF CMakeFiles/utcommon.dir/test_parser_scene.cpp.o.d -o CMakeFiles/utcommon.dir/test_parser_scene.cpp.o -c /workspace/utcommon/test_parser_scene.cpp
+[ 92%] Linking CXX executable utsoa
+cd /workspace/out/build/coverage/utsoa && /usr/bin/cmake -E cmake_link_script CMakeFiles/utsoa.dir/link.txt --verbose=1
+/usr/bin/c++ --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wl,--dependency-file=CMakeFiles/utsoa.dir/link.d CMakeFiles/utsoa.dir/test_image_soa.cpp.o -o utsoa  ../lib/libgtest_main.a ../lib/libgtest.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 92%] Built target utsoa
+[ 96%] Linking CXX executable utaos
+cd /workspace/out/build/coverage/utaos && /usr/bin/cmake -E cmake_link_script CMakeFiles/utaos.dir/link.txt --verbose=1
+/usr/bin/c++ --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wl,--dependency-file=CMakeFiles/utaos.dir/link.d CMakeFiles/utaos.dir/test_image_aos.cpp.o -o utaos  ../lib/libgtest_main.a ../lib/libgtest.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[ 96%] Built target utaos
+[100%] Linking CXX executable utcommon
+cd /workspace/out/build/coverage/utcommon && /usr/bin/cmake -E cmake_link_script CMakeFiles/utcommon.dir/link.txt --verbose=1
+/usr/bin/c++ --coverage -O0 -g -fno-inline -fno-inline-small-functions -fno-omit-frame-pointer -g -Wl,--dependency-file=CMakeFiles/utcommon.dir/link.d CMakeFiles/utcommon.dir/test_vector.cpp.o CMakeFiles/utcommon.dir/test_camera.cpp.o CMakeFiles/utcommon.dir/test_config.cpp.o CMakeFiles/utcommon.dir/test_hits.cpp.o CMakeFiles/utcommon.dir/test_misc.cpp.o CMakeFiles/utcommon.dir/test_parser_scene.cpp.o -o utcommon  ../common/libcommon.a ../lib/libgtest_main.a ../lib/libgtest.a
+gmake[2]: Leaving directory '/workspace/out/build/coverage'
+[100%] Built target utcommon
+gmake[1]: Leaving directory '/workspace/out/build/coverage'
+/usr/bin/cmake -E cmake_progress_start /workspace/out/build/coverage/CMakeFiles 0
+

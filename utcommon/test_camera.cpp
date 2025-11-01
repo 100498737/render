@@ -116,3 +116,85 @@ TEST(camera_basic, jitter_changes_ray_direction) {
 
   EXPECT_GT(diff, 1e-6);  // debería haber alguna diferencia real
 }
+
+TEST(Camera, CenterRayPointsNearLookAt_Basic) {
+  std::uint32_t const W = 100, H = 80;
+  render::camera cam{
+    W,
+    H,
+    /*vfov_deg*/ 40.0,
+    /*from*/ {0, 0, 1},
+    /*at*/
+    {0, 0, 0},
+    /*vup*/
+    {0, 1, 0},
+    /*spp*/
+    1U,
+    /*seed*/ 1'234ULL,
+    /*aperture*/ 0.0,
+    /*focus*/ 1.0
+  };
+
+  std::uint32_t const cx = W / 2, cy = H / 2;
+  render::ray r = cam.get_ray(cx, cy, 0);
+
+  render::vector want =
+      (render::vector{0, 0, 0} - render::vector{0, 0, 1}).normalized();  // (0,0,-1)
+  double cosang = r.direction.dot(want);                                 // ambas unitarias
+  EXPECT_GT(cosang, 0.995) << "El rayo central debe apuntar ~al lookat";
+}
+
+TEST(Camera, Jitter_IsDeterministic_WithSeed) {
+  using namespace render;
+  camera c1{
+    64, 64, 40.0, {0, 0, 1},
+       {0, 0, 0},
+       {0, 1, 0},
+       4u, 1'234ull, 0.0, 1.0
+  };
+  camera c2{
+    64, 64, 40.0, {0, 0, 1},
+       {0, 0, 0},
+       {0, 1, 0},
+       4u, 1'234ull, 0.0, 1.0
+  };
+  auto r1 = c1.get_ray(10, 20, 0);
+  auto r2 = c2.get_ray(10, 20, 0);
+  EXPECT_NEAR(r1.direction.x, r2.direction.x, 1e-12);
+  EXPECT_NEAR(r1.direction.y, r2.direction.y, 1e-12);
+  EXPECT_NEAR(r1.direction.z, r2.direction.z, 1e-12);
+}
+
+TEST(Camera, DOF_Path_Executes) {
+  render::camera cam{
+    32,
+    24,
+    40.0,
+    /*from*/ {0, 0, 1},
+    /*at*/
+    {0, 0, 0},
+    /*vup*/
+    {0, 1, 0},
+    /*spp*/
+    2u,
+    /*seed*/ 7ull,
+    /*aperture*/ 0.3,
+    /*focus*/ 1.0
+  };
+  auto r0 = cam.get_ray(10, 10, 0);
+  auto r1 = cam.get_ray(10, 10, 1);
+  // Con DOF y spp>1, alguna diferencia debe existir
+  double ddot = r0.direction.dot(r1.direction);
+  EXPECT_LT(ddot, 0.999999);  // no exactamente iguales
+}
+
+TEST(Camera, CornerRays_ExecuteBranches) {
+  render::camera cam{
+    64, 48, 120.0, {1, 1, 2},
+       {0, 0, 0},
+       {0, 1, 0},
+       1u, 42ull, 0.0, 1.0
+  };
+  (void) cam.get_ray(0, 0, 0);
+  (void) cam.get_ray(63, 47, 0);
+}

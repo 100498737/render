@@ -1,0 +1,4 @@
+matte  red   color=0.8,0.2,0.2
+metal  alu   color=0.8,0.8,0.8 fuzz=0.1
+refractive glass ior=1.5
+sphere ball center=0,0,0 radius=0.5 mat=red

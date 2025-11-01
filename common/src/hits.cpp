@@ -42,156 +42,119 @@ namespace render {
   bool hit_cylinder(ray const & r, vector const & base, vector const & axis, double height,
                     double radius, double t_min, double t_max, double * t_out,
                     vector * normal_out) {
-    // Normaliza el eje del cilindro
-    vector k    = axis;
-    double klen = std::sqrt(k.dot(k));
-    if (klen == 0.0 or height <= 0.0 or radius <= 0.0) {
-      return false;
-    }
-    k = k * (1.0 / klen);  // k = eje unitario
-
-    // Descompón en componentes perpendiculares al eje
-    vector d  = r.direction;
-    vector oc = r.origin - base;
-
-    double d_parallel = d.dot(k);
-    vector d_perp     = d - k * d_parallel;
-
-    double oc_parallel = oc.dot(k);
-    vector oc_perp     = oc - k * oc_parallel;
-
-    // Intersección con cilindro lateral: |oc_perp + t*d_perp|^2 = radius^2
-    double A = d_perp.dot(d_perp);
-    double B = 2.0 * oc_perp.dot(d_perp);
-    double C = oc_perp.dot(oc_perp) - radius * radius;
-
-    // Ray paralelo al eje (A ~ 0) => no corta la superficie lateral
-    if (A <= 0.0) {
-      return false;
-    }
-
-    double disc = B * B - 4.0 * A * C;
-    if (disc < 0.0) {
-      return false;
-    }
-    double sqrt_disc = std::sqrt(disc);
-
-    auto within_axial = [&](double t) -> bool {
-      if (t < t_min or t > t_max) {
-        return false;
-      }
-      // Coordenada axial z (distancia sobre el eje desde 'base')
-      double z = oc_parallel + t * d_parallel;
-      // Excluimos bordes exactos (0 y height) para que no “toque” en el canto
-      return (z > 0.0) and (z < height);
+    // helpers locales
+    auto length    = [](vector const & v) -> double { return std::sqrt(v.dot(v)); };
+    auto normalize = [&](vector v) -> vector {
+      double L = length(v);
+      return (L > 0.0) ? (1.0 / L) * v : v;
     };
 
-    auto compute_normal = [&](double t, vector * n_out) {
-      double z    = oc_parallel + t * d_parallel;
-      vector p    = r.at(t);
-      vector q    = base + k * z;  // proyección de p sobre el eje
-      vector n    = p - q;         // radial
-      double nlen = std::sqrt(n.dot(n));
-      if (nlen > 0.0) {
-        n = n * (1.0 / nlen);
-      }
-      if (n_out != nullptr) {
-        *n_out = n;
-      }
-    };
+    // Normaliza el eje (por si nos llega sin normalizar)
+    vector ax = normalize(axis);
+    vector O  = r.origin;
+    vector D  = r.direction;         // se asume ya normalizada en tu cámara
+    vector P0 = base;                // punto de la tapa inferior
+    vector P1 = base + height * ax;  // punto de la tapa superior
 
-    // Probar raíz cercana
-    double t_candidate = (-B - sqrt_disc) / (2.0 * A);
-    if (within_axial(t_candidate)) {
-      if (t_out != nullptr) {
-        *t_out = t_candidate;
+    bool hit_any     = false;
+    double best_t    = t_max;
+    vector best_norm = {0, 0, 0};
+
+    // --- 1) Intersección con el lateral ---------------------------------------
+    // Proyecta origen y dirección al plano perpendicular a ax
+    double D_par = D.dot(ax);
+    double O_par = (O - P0).dot(ax);
+
+    vector D_perp = D - D_par * ax;  // componente perpendicular del rayo
+    vector O_perp = (O - P0) - O_par * ax;
+
+    double a = D_perp.dot(D_perp);
+    double b = 2.0 * O_perp.dot(D_perp);
+    double c = O_perp.dot(O_perp) - radius * radius;
+
+    if (a > 1e-16) {
+      double disc = b * b - 4.0 * a * c;
+      if (disc >= 0.0) {
+        double sdisc = std::sqrt(disc);
+        // Dos candidatos
+        double t0 = (-b - sdisc) / (2.0 * a);
+        double t1 = (-b + sdisc) / (2.0 * a);
+
+        auto try_t_lateral = [&](double t) {
+          if (t < t_min || t > best_t) {
+            return;
+          }
+          // Comprueba que el punto cae entre tapas: 0 <= y <= height
+          double y = O_par + t * D_par;  // coordenada a lo largo de ax relativa a P0
+          if (y < 0.0 || y > height) {
+            return;
+          }
+
+          // Punto de impacto y normal lateral (componente perpendicular normalizada)
+          vector P  = O + t * D;
+          vector Pc = P - (P0 + y * ax);  // vector radial en el plano perpendicular
+          vector N  = normalize(Pc);      // salida hacia fuera
+
+          best_t    = t;
+          best_norm = N;
+          hit_any   = true;
+        };
+
+        // pruebo ambos
+        if (t0 > t_min) {
+          try_t_lateral(t0);
+        }
+        if (t1 > t_min) {
+          try_t_lateral(t1);
+        }
       }
-      compute_normal(t_candidate, normal_out);
-      return true;
     }
 
-    // Probar raíz lejana
-    t_candidate = (-B + sqrt_disc) / (2.0 * A);
-    if (within_axial(t_candidate)) {
-      if (t_out != nullptr) {
-        *t_out = t_candidate;
-      }
-      compute_normal(t_candidate, normal_out);
-      return true;
-    }
-
-    // ==== TAPA INFERIOR (plano en la base) ====
-    // Usa solo nombres que existen en tu firma: base, axis, radius, t_min, t_max, *t_hit, *n_hit.
+    // --- 2) Intersección con TAPA inferior (plano por P0, normal -ax hacia fuera) ---
     {
-      // Ojo: adapta estos dos si en tu ray son r.orig / r.dir en vez de r.origin / r.direction
-      render::vector const & o = r.origin;
-      render::vector const & d = r.direction;
-
-      render::vector const p0 = base;  // centro de la tapa inferior
-      render::vector const n  = axis;  // normal de la tapa (asumo axis normalizado)
-
-      double const denom = n.dot(d);  // si tu vector no tiene .dot, usa (n * d) si lo sobrecargaste
-      if (std::abs(denom) > 1e-12) {
-        double const t = (p0 - o).dot(n) / denom;
-        if (t >= t_min and t <= t_max) {
-          render::vector const p = o + d * t;
-
-          // ¿p está dentro del disco de radio 'radius'?
-          // Quita la componente paralela a 'axis' y mide la longitud de la perpendicular.
-          render::vector const v      = p - p0;
-          render::vector const v_perp = v - n * v.dot(n);
-          double const r2             = v_perp.dot(v_perp);
-
-          if (r2 <= radius * radius + 1e-12) {
-            // Si es el más cercano, actualiza salida
-            if (t < *t_out) {
-              *t_out      = t;
-              *normal_out = n;  // normal de la tapa inferior
-              // Orienta normal contra el rayo (convención habitual)
-              if (normal_out->dot(d) > 0.0) {
-                *normal_out = (*normal_out) * (-1.0);
-              }
-            }
+      double denom = ax.dot(D);       // D·ax
+      if (std::abs(denom) > 1e-16) {  // no paralelo
+        double t = (P0 - O).dot(ax) / denom;
+        if (t >= t_min && t < best_t) {
+          vector P = O + t * D;
+          // distancia radial al centro de la tapa inferior
+          vector radial = P - P0 - ((P - P0).dot(ax)) * ax;  // componente perpendicular
+          if (radial.dot(radial) <= radius * radius + 1e-12) {
+            best_t    = t;
+            best_norm = -1.0 * ax;  // normal hacia fuera en la tapa inferior
+            hit_any   = true;
           }
         }
       }
     }
 
-    // ==== TAPA SUPERIOR (plano en la parte alta) ====
-    // p0_top = base + height * axis
+    // --- 3) Intersección con TAPA superior (plano por P1, normal +ax hacia fuera) ---
     {
-      render::vector const & o = r.origin;
-      render::vector const & d = r.direction;
-
-      render::vector const p0_top = base + axis * height;  // centro de la tapa superior
-      render::vector const n_top  = axis * (-1.0);  // normal hacia fuera (opuesta a la inferior)
-
-      double const denom = n_top.dot(d);
-      if (std::abs(denom) > 1e-12) {
-        double const t = (p0_top - o).dot(n_top) / denom;
-        if (t >= t_min and t <= t_max) {
-          render::vector const p = o + d * t;
-
-          // Dentro del disco de radio 'radius'?
-          render::vector const v      = p - p0_top;
-          render::vector const v_perp = v - axis * v.dot(axis);
-          double const r2             = v_perp.dot(v_perp);
-
-          if (r2 <= radius * radius + 1e-12) {
-            if (t < *t_out) {
-              *t_out      = t;
-              *normal_out = n_top;
-              // orienta la normal contra el rayo (convención)
-              if (normal_out->dot(d) > 0.0) {
-                *normal_out = (*normal_out) * (-1.0);
-              }
-            }
+      double denom = ax.dot(D);
+      if (std::abs(denom) > 1e-16) {
+        double t = (P1 - O).dot(ax) / denom;
+        if (t >= t_min && t < best_t) {
+          vector P      = O + t * D;
+          vector radial = P - P1 - ((P - P1).dot(ax)) * ax;
+          if (radial.dot(radial) <= radius * radius + 1e-12) {
+            best_t    = t;
+            best_norm = ax;  // normal hacia fuera en la tapa superior
+            hit_any   = true;
           }
         }
       }
     }
 
-    return false;
+    if (!hit_any) {
+      return false;
+    }
+    if (t_out) {
+      *t_out = best_t;
+    }
+    if (normal_out) {
+      *normal_out = best_norm;
+    }
+    return true;
   }
 
 }  // namespace render

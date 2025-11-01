@@ -1,0 +1,11 @@
+width 8
+height 6
+vfov 40
+lookfrom 0 0 1
+lookat   0 0 0
+vup      0 1 0
+samples 1
+seed 1234
+aperture 0.0
+focus_dist 1.0
+max_depth 1
