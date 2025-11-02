@@ -27,3 +27,4 @@ target_compile_options(common
     -Wall -Wextra -Werror -pedantic -pedantic-errors
     -Wconversion -Wsign-conversion
 )
+

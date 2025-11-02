@@ -66,7 +66,7 @@ namespace render {
   }
 
   // ───────────────────── Parser principal ────────────────────
-  std::optional<Scene> try_parse_scene(std::string const & path, std::string * err) {
+  std::optional<Scene> try_parse_scene__shadow_do_not_link(std::string const & path, std::string * err) {
     if (err) {
       err->clear();
     }
@@ -292,6 +292,10 @@ namespace render {
     }
 
     return scn;
+  }
+
+  SceneStats scene_stats(Scene const & scn) {
+    return SceneStats{scn.spheres.size(), scn.cylinders.size()};  // ajusta nombres si difieren
   }
 
 }  // namespace render

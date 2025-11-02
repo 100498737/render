@@ -38,4 +38,10 @@ namespace render {
     std::vector<Cylinder> cylinders;
   };
 
+  struct SceneStats {
+    std::size_t spheres, cylinders;
+  };
+
+  SceneStats scene_stats(Scene const & scn);  // implementada en scene.cpp
+
 }  // namespace render

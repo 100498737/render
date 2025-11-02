@@ -83,3 +83,25 @@ TEST(Parser, CFG_TrailingInvalid) {
   ASSERT_FALSE(cfg);
   EXPECT_FALSE(err.empty());
 }
+
+TEST(Parser, CFG_AcceptsBaselineKeys) {
+  std::ofstream o("cfg_ok2.txt");
+  o << "width 16\nheight 9\nvfov 45\n"
+       "lookfrom 0 1 2\nlookat 0 0 0\nvup 0 1 0\n"
+       "samples 1\nseed 123\naperture 0.0\nfocus_dist 1.0\nmax_depth 1\n";
+  o.close();
+  std::string err;
+  auto cfg = render::try_parse_config("cfg_ok2.txt", &err);
+  ASSERT_TRUE(cfg) << err;
+}
+
+TEST(ParserScene, Scene_Minimal_OK_2) {
+  std::ofstream o("scene_ok2.txt");
+  o << "matte m color=0.8,0.2,0.2\n"
+       "sphere s center=0,0,0 radius=0.5 mat=m\n";
+  o.close();
+  std::string err;
+  auto scn = render::try_parse_scene("scene_ok2.txt", &err);
+  ASSERT_TRUE(scn) << err;
+  EXPECT_GE(scn->spheres.size(), 1u);
+}

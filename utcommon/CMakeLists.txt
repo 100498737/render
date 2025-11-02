@@ -6,6 +6,7 @@ add_executable(utcommon
   test_hits.cpp
   test_misc.cpp
   test_parser_scene.cpp
+  
 )
 
 target_include_directories(utcommon PRIVATE

@@ -1,7 +1,7 @@
-width 64
-height 64
+width 16
+height 9
 vfov 45
-lookfrom 0 0 1
+lookfrom 0 1 2
 lookat 0 0 0
 vup 0 1 0
 samples 1
