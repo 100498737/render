@@ -187,14 +187,17 @@ int main(int argc, char * argv[]) {
     }
   }
 
-  bool const ok =
-      render::write_ppm_gamma(argv[3], W, H, [&](int x, int y, double & r, double & g, double & b) {
-        std::uint8_t R, G, B;
-        img.get(x, y, R, G, B);
-        r = R / 255.0;
-        g = G / 255.0;
-        b = B / 255.0;
-      });
+  // Después de haber parseado la config y tener std::optional<render::Config> cfg
+  double const gamma = (cfg && cfg.has_value()) ? cfg->gamma : 2.2;
+
+  bool const ok = render::write_ppm_gamma(argv[3], W, H, gamma,
+                                          [&](int x, int y, double & r, double & g, double & b) {
+                                            std::uint8_t R, G, B;
+                                            img.get(x, y, R, G, B);
+                                            r = R / 255.0;
+                                            g = G / 255.0;
+                                            b = B / 255.0;
+                                          });
 
   if (!ok) {
     std::println(stderr, "Error: cannot write '{}'", argv[3]);

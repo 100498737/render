@@ -150,13 +150,13 @@ TEST(Camera, Jitter_IsDeterministic_WithSeed) {
     64, 64, 40.0, {0, 0, 1},
        {0, 0, 0},
        {0, 1, 0},
-       4u, 1'234ull, 0.0, 1.0
+       4U, 1'234ULL, 0.0, 1.0
   };
   camera c2{
     64, 64, 40.0, {0, 0, 1},
        {0, 0, 0},
        {0, 1, 0},
-       4u, 1'234ull, 0.0, 1.0
+       4U, 1'234ULL, 0.0, 1.0
   };
   auto r1 = c1.get_ray(10, 20, 0);
   auto r2 = c2.get_ray(10, 20, 0);
@@ -176,8 +176,8 @@ TEST(Camera, DOF_Path_Executes) {
     /*vup*/
     {0, 1, 0},
     /*spp*/
-    2u,
-    /*seed*/ 7ull,
+    2U,
+    /*seed*/ 7ULL,
     /*aperture*/ 0.3,
     /*focus*/ 1.0
   };
@@ -193,7 +193,7 @@ TEST(Camera, CornerRays_ExecuteBranches) {
     64, 48, 120.0, {1, 1, 2},
        {0, 0, 0},
        {0, 1, 0},
-       1u, 42ull, 0.0, 1.0
+       1U, 42ULL, 0.0, 1.0
   };
   (void) cam.get_ray(0, 0, 0);
   (void) cam.get_ray(63, 47, 0);

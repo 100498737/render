@@ -82,7 +82,7 @@ TEST(Hits, Sphere_Center_Hit) {
     {0, 0, -1}
   };     // hacia el origen
 
-  double t;
+  double t{};
   vector n;
   bool ok = hit_sphere(r, C, R, 1e-6, 1e9, &t, &n);
   ASSERT_TRUE(ok);
@@ -102,7 +102,7 @@ TEST(Hits, Sphere_Clear_Miss) {
     {  0,   0,  -1}
   };           // paralelo a Z, lejos en X
 
-  double t;
+  double t{};
   vector n;
   bool ok = hit_sphere(r, C, R, 1e-6, 1e9, &t, &n);
   EXPECT_FALSE(ok);
@@ -122,7 +122,7 @@ TEST(Hits, Cylinder_BottomCap_WithNonUnitAxis) {
     {0,  1, 0}
   };
 
-  double t;
+  double t{};
   vector n;
   bool ok = hit_cylinder(r, base, axis, height, radius, 1e-6, 1e9, &t, &n);
   ASSERT_TRUE(ok);
@@ -140,7 +140,7 @@ TEST(Hits, Sphere_Tangent) {
     {-2, 1, 0},
     { 1, 0, 0}
   };
-  double t;
+  double t{};
   vector n;
   bool ok = hit_sphere(r, C, R, 1e-6, 1e9, &t, &n);
   ASSERT_TRUE(ok);
@@ -167,7 +167,7 @@ TEST(hits_cylinder, miss_no_intersection) {
     {0.0, 1.0, 0.0}
   };
 
-  double t;
+  double t{};
   vector n;
   bool ok = hit_cylinder(ray_away, base, axis, height, radius,
                          /*t_min*/ 1e-6, /*t_max*/ 1e9, &t, &n);
@@ -217,7 +217,7 @@ TEST(Hits, CylinderLateral_TowardsX) {
     {-1.0, 0.0, 0.0}
   };
 
-  double t;
+  double t{};
   vector n;
   bool ok = hit_cylinder(ray, base, axis, height, radius, 1e-6, 1e9, &t, &n);
   ASSERT_TRUE(ok);

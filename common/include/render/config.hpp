@@ -31,6 +31,10 @@ namespace render {
     // Muestreo y RNG
     std::uint32_t samples_per_pixel{4};
     std::uint64_t seed{42ULL};
+
+    // --- NUEVO: gamma configurable (default 2.2) ---
+    // De momento no lo usamos; más adelante conectaremos parser -> writer PPM.
+    double gamma{2.2};
   };
 
 }  // namespace render

@@ -1,0 +1,26 @@
+[1/26] Building CXX object common/CMakeFiles/common.dir/Release/src/config.cpp.o
+[2/26] Building CXX object common/CMakeFiles/common.dir/Release/src/camera.cpp.o
+[3/26] Building CXX object common/CMakeFiles/common.dir/Release/src/hits.cpp.o
+[4/26] Building CXX object common/CMakeFiles/common.dir/Release/src/ppm.cpp.o
+[5/26] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/Release/src/gtest_main.cc.o
+[6/26] Building CXX object common/CMakeFiles/common.dir/Release/src/scene.cpp.o
+[7/26] Building CXX object utcommon/CMakeFiles/utcommon.dir/Release/test_vector.cpp.o
+[8/26] Building CXX object common/CMakeFiles/common.dir/Release/src/parser.cpp.o
+[9/26] Building CXX object utcommon/CMakeFiles/utcommon.dir/Release/test_camera.cpp.o
+[10/26] Building CXX object utcommon/CMakeFiles/utcommon.dir/Release/test_config.cpp.o
+[11/26] Linking CXX static library common/Release/libcommon.a
+[12/26] Building CXX object utcommon/CMakeFiles/utcommon.dir/Release/test_hits.cpp.o
+[13/26] Building CXX object utsoa/CMakeFiles/utsoa.dir/Release/test_image_soa.cpp.o
+[14/26] Building CXX object aos/CMakeFiles/render-aos.dir/Release/src/main.cpp.o
+[15/26] Linking CXX executable aos/Release/render-aos
+[16/26] Building CXX object soa/CMakeFiles/render-soa.dir/Release/src/main.cpp.o
+[17/26] Linking CXX executable soa/Release/render-soa
+[18/26] Building CXX object utcommon/CMakeFiles/utcommon.dir/Release/test_misc.cpp.o
+[19/26] Building CXX object utcommon/CMakeFiles/utcommon.dir/Release/test_parser_scene.cpp.o
+[20/26] Building CXX object utaos/CMakeFiles/utaos.dir/Release/test_image_aos.cpp.o
+[21/26] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/Release/src/gtest-all.cc.o
+[22/26] Linking CXX static library lib/Release/libgtest.a
+[23/26] Linking CXX static library lib/Release/libgtest_main.a
+[24/26] Linking CXX executable utaos/Release/utaos
+[25/26] Linking CXX executable utsoa/Release/utsoa
+[26/26] Linking CXX executable utcommon/Release/utcommon

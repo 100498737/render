@@ -4,10 +4,12 @@
 
 namespace render {
 
-  // Escribe un PPM (ASCII P3) aplicando gamma 2.0 a cada píxel leído vía 'sampler'.
-  // 'sampler(x,y,r,g,b)' debe devolver r,g,b en [0,1] por referencia.
-  // Devuelve true si se pudo escribir correctamente.
+  // ── Versión ORIGINAL (4 parámetros) que usan los tests ──────────────────────
   bool write_ppm_gamma(std::string const & path, int width, int height,
+                       std::function<void(int, int, double &, double &, double &)> const & sampler);
+
+  // ── NUEVA sobrecarga (5 parámetros) con gamma configurable ──────────────────
+  bool write_ppm_gamma(std::string const & path, int width, int height, double gamma,
                        std::function<void(int, int, double &, double &, double &)> const & sampler);
 
 }  // namespace render

@@ -1,0 +1,7 @@
+CMake Error: No such build preset in /workspace: "clang-release"
+Available build presets:
+
+  "gcc-debug"
+  "gcc-release"
+  "clang-tidy-debug"
+  "clang-tidy-release"

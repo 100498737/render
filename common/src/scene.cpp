@@ -66,7 +66,8 @@ namespace render {
   }
 
   // ───────────────────── Parser principal ────────────────────
-  std::optional<Scene> try_parse_scene__shadow_do_not_link(std::string const & path, std::string * err) {
+  std::optional<Scene> try_parse_scene__shadow_do_not_link(std::string const & path,
+                                                           std::string * err) {
     if (err) {
       err->clear();
     }
@@ -87,7 +88,8 @@ namespace render {
 
     std::string line;
     int line_no = 0;
-    auto fail   = [&](std::string const & msg) -> std::optional<Scene> {
+
+    auto fail = [&](std::string const & msg) -> std::optional<Scene> {
       if (err) {
         *err = "Error: " + msg + " in " + path + ":" + std::to_string(line_no);
       }
@@ -105,7 +107,78 @@ namespace render {
       std::string head;
       iss >> head;
 
-      // ── Material ────────────────────────────────────────────
+      // ────────────────────────────────────────────────────────────────────────
+      // NUEVO: Sintaxis corta de materiales
+      //   matte: <name> R G B
+      //   metal: <name> R G B [fuzz]
+      //   refractive: <name> IOR
+      // ────────────────────────────────────────────────────────────────────────
+      if (head == "matte:" || head == "metal:" || head == "refractive:") {
+        if (phase == Phase::Objects) {
+          return fail("material declared after objects");
+        }
+        std::string name;
+        if (!(iss >> name) || name.empty()) {
+          return fail("invalid material header");
+        }
+        if (!mat_names.insert(name).second) {
+          return fail("duplicated material '" + name + "'");
+        }
+
+        Material m;
+        m.name = name;
+
+        if (head == "matte:") {
+          m.kind = MaterialKind::Matte;
+          double r{}, g{}, b{};
+          if (!(iss >> r >> g >> b)) {
+            return fail("invalid format for 'color'");
+          }
+          m.color = Vec3{r, g, b};
+        } else if (head == "metal:") {
+          m.kind = MaterialKind::Metal;
+          double r{}, g{}, b{};
+          if (!(iss >> r >> g >> b)) {
+            return fail("invalid format for 'color'");
+          }
+          m.color = Vec3{r, g, b};
+          // fuzz opcional (por defecto 0)
+          if (iss.peek() != std::char_traits<char>::eof()) {
+            double f{};
+            if (!(iss >> f)) {
+              return fail("invalid value for 'fuzz'");
+            }
+            m.fuzz = f;
+          }
+          if (m.fuzz < 0.0 || m.fuzz > 1.0) {
+            return fail("invalid value for 'fuzz' (must be in [0,1])");
+          }
+        } else {  // "refractive:"
+          m.kind = MaterialKind::Refractive;
+          double ior{};
+          if (!(iss >> ior)) {
+            return fail("invalid value for 'ior'");
+          }
+          m.ior = ior;
+          if (m.ior <= 1.0) {
+            return fail("invalid value for 'ior' (must be > 1)");
+          }
+        }
+
+        // no tokens extra
+        std::string trailing;
+        if (iss >> trailing) {
+          return fail("invalid format (trailing data) after material");
+        }
+
+        scn.materials.push_back(std::move(m));
+        continue;
+      }
+
+      // ────────────────────────────────────────────────────────────────────────
+      // Sintaxis larga de materiales (la tuya original)
+      //   material <kind> <name> color=... | fuzz=... | ior=...
+      // ────────────────────────────────────────────────────────────────────────
       if (head == "material") {
         if (phase == Phase::Objects) {
           return fail("material declared after objects");
@@ -151,13 +224,11 @@ namespace render {
               return fail("invalid value for 'ior'");
             }
           } else {
-            // clave desconocida para ese tipo
             std::string key = kv.substr(0, kv.find('='));
             return fail("unknown key '" + key + "' for material '" + kindStr + "'");
           }
         }
 
-        // rangos requeridos por tipo
         if (m.kind == MaterialKind::Metal) {
           if (m.fuzz < 0.0 || m.fuzz > 1.0) {
             return fail("invalid value for 'fuzz' (must be in [0,1])");
@@ -172,13 +243,89 @@ namespace render {
         continue;
       }
 
-      // ── Objetos ────────────────────────────────────────────
-      if (head == "sphere" || head == "cylinder") {
-        // TA3: un objeto NO puede aparecer antes de declarar al menos un material
+      // ────────────────────────────────────────────────────────────────────────
+      // NUEVO: Sintaxis corta de objetos
+      //   sphere: cx cy cz r <mat_name>
+      //   cylinder: bx by bz ax ay az h r <mat_name>
+      // ────────────────────────────────────────────────────────────────────────
+      if (head == "sphere:" || head == "cylinder:") {
         if (mat_names.empty()) {
           return fail("object declared before materials");
         }
+        phase = Phase::Objects;
 
+        if (head == "sphere:") {
+          std::string mat;
+          Sphere s;
+          if (!(iss >> s.center.x >> s.center.y >> s.center.z >> s.radius >> mat)) {
+            return fail("invalid 'sphere:' format (cx cy cz r mat)");
+          }
+          if (s.radius <= 0.0) {
+            return fail("invalid value for 'radius' (must be > 0)");
+          }
+          if (!mat_names.count(mat)) {
+            return fail("unknown material '" + mat + "'");
+          }
+          // nombre autogenerado (único)
+          std::string base = "sphere";
+          std::string name =
+              base + "_" + std::to_string(static_cast<unsigned>(scn.spheres.size() + 1));
+          while (!sph_names.insert(name).second) {
+            name += "_";
+          }
+          s.name = std::move(name);
+          s.mat  = std::move(mat);
+          scn.spheres.push_back(std::move(s));
+          continue;
+        } else {  // "cylinder:"
+          Cylinder c;
+          std::string mat;
+          if (!(iss >>
+                c.base.x >>
+                c.base.y >>
+                c.base.z >>
+                c.axis.x >>
+                c.axis.y >>
+                c.axis.z >>
+                c.height >>
+                c.radius >>
+                mat))
+          {
+            return fail("invalid 'cylinder:' format (bx by bz ax ay az h r mat)");
+          }
+          if (!normalize(c.axis)) {
+            return fail("invalid value for 'axis' (zero vector)");
+          }
+          if (c.height <= 0.0) {
+            return fail("invalid value for 'height' (must be > 0)");
+          }
+          if (c.radius <= 0.0) {
+            return fail("invalid value for 'radius' (must be > 0)");
+          }
+          if (!mat_names.count(mat)) {
+            return fail("unknown material '" + mat + "'");
+          }
+
+          std::string base = "cylinder";
+          std::string name =
+              base + "_" + std::to_string(static_cast<unsigned>(scn.cylinders.size() + 1));
+          while (!cyl_names.insert(name).second) {
+            name += "_";
+          }
+          c.name = std::move(name);
+          c.mat  = std::move(mat);
+          scn.cylinders.push_back(std::move(c));
+          continue;
+        }
+      }
+
+      // ────────────────────────────────────────────────────────────────────────
+      // Sintaxis larga de objetos (la tuya original)
+      // ────────────────────────────────────────────────────────────────────────
+      if (head == "sphere" || head == "cylinder") {
+        if (mat_names.empty()) {
+          return fail("object declared before materials");
+        }
         phase = Phase::Objects;
 
         if (head == "sphere") {
@@ -226,7 +373,7 @@ namespace render {
           continue;
         }
 
-        // cylinder
+        // cylinder (largo)
         {
           std::string name;
           iss >> name;

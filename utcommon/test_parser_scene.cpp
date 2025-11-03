@@ -1,5 +1,4 @@
 // utcommon/src/test_parser_scene.cpp
-#include "render/config.hpp"
 #include "render/parser.hpp"
 #include "render/scene.hpp"
 #include <fstream>
@@ -48,7 +47,7 @@ TEST(ParserScene, Scene_Rich_Ok) {
   std::string err;
   auto scn = render::try_parse_scene("scene_ok.txt", &err);
   ASSERT_TRUE(scn) << err;
-  EXPECT_GE(scn->spheres.size(), 1u);
+  EXPECT_GE(scn->spheres.size(), 1U);
   // no exigimos cilindros aquí para no depender de la gramática exacta
 }
 
@@ -103,5 +102,5 @@ TEST(ParserScene, Scene_Minimal_OK_2) {
   std::string err;
   auto scn = render::try_parse_scene("scene_ok2.txt", &err);
   ASSERT_TRUE(scn) << err;
-  EXPECT_GE(scn->spheres.size(), 1u);
+  EXPECT_GE(scn->spheres.size(), 1U);
 }

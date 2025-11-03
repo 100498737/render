@@ -117,6 +117,12 @@ namespace render {
     std::string line;
     int line_number = 0;
 
+    // Flags auxiliares para aspect_ratio ↔ width/height
+    bool width_set  = false;  // ← no está “fijado” hasta que lo lea del archivo
+    bool height_set = false;
+    bool ar_seen    = false;  // vimos aspect_ratio
+    double ar_val   = 0.0;    // valor válido de aspect_ratio
+
     while (std::getline(file, line)) {
       ++line_number;
 
@@ -148,6 +154,13 @@ namespace render {
           }
           return std::nullopt;
         }
+        width_set = true;
+
+        // Si ya tenemos aspect_ratio y NO se ha fijado height explícitamente, lo calculamos ahora
+        if (ar_seen && !height_set) {
+          double const h = static_cast<double>(cfg.width) / ar_val;
+          cfg.height     = (h < 1.0) ? 1U : static_cast<std::uint32_t>(h + 0.5);  // round
+        }
 
       } else if (key == "height" || key == "image_height" || key == "h") {
         if (!(iss >> cfg.height)) {
@@ -165,8 +178,38 @@ namespace render {
           }
           return std::nullopt;
         }
+        height_set = true;
 
-      } else if (key == "fov" || key == "vfov") {
+      } else if (key == "aspect_ratio") {
+        double ar{};
+        if (!(iss >> ar)) {
+          if (err) {
+            *err = "Error: invalid format for 'aspect_ratio' in " +
+                   filename +
+                   ":" +
+                   std::to_string(line_number);
+          }
+          return std::nullopt;
+        }
+        if (ar <= 0.0) {
+          if (err) {
+            *err = "Error: invalid value for 'aspect_ratio' in " +
+                   filename +
+                   ":" +
+                   std::to_string(line_number);
+          }
+          return std::nullopt;
+        }
+        ar_seen = true;
+        ar_val  = ar;
+
+        // Si ya conocemos width y NO se ha fijado height explícitamente, lo calculamos
+        if (width_set && !height_set) {
+          double const h = static_cast<double>(cfg.width) / ar_val;
+          cfg.height     = (h < 1.0) ? 1U : static_cast<std::uint32_t>(h + 0.5);  // round
+        }
+
+      } else if (key == "fov" || key == "vfov" || key == "field_of_view") {
         if (!(iss >> cfg.vertical_fov_deg)) {
           if (err) {
             *err = "Error: invalid format for 'fov' in " +
@@ -200,6 +243,25 @@ namespace render {
           return std::nullopt;
         }
 
+      } else if (key == "gamma") {
+        double g{};
+        if (!(iss >> g)) {
+          if (err) {
+            *err = "Error: invalid format for 'gamma' in " +
+                   filename +
+                   ":" +
+                   std::to_string(line_number);
+          }
+          return std::nullopt;
+        }
+        if (g <= 0.0) {
+          if (err) {
+            *err = "Error: gamma must be > 0 in " + filename + ":" + std::to_string(line_number);
+          }
+          return std::nullopt;
+        }
+        cfg.gamma = g;
+
       } else if (key == "seed" || key == "rng_seed") {
         if (!(iss >> cfg.seed)) {
           if (err) {
@@ -211,7 +273,11 @@ namespace render {
           return std::nullopt;
         }
 
-      } else if (key == "lookfrom" || key == "camera_from" || key == "from") {
+      } else if (key == "lookfrom" ||
+                 key == "camera_from" ||
+                 key == "from" ||
+                 key == "camera_position")
+      {
         if (!(iss >> cfg.lookfrom.x >> cfg.lookfrom.y >> cfg.lookfrom.z)) {
           if (err) {
             *err = "Error: invalid format for 'lookfrom' in " +
@@ -222,7 +288,7 @@ namespace render {
           return std::nullopt;
         }
 
-      } else if (key == "lookat" || key == "camera_at" || key == "at") {
+      } else if (key == "lookat" || key == "camera_at" || key == "at" || key == "camera_target") {
         if (!(iss >> cfg.lookat.x >> cfg.lookat.y >> cfg.lookat.z)) {
           if (err) {
             *err = "Error: invalid format for 'lookat' in " +
@@ -233,7 +299,7 @@ namespace render {
           return std::nullopt;
         }
 
-      } else if (key == "vup" || key == "camera_up" || key == "up") {
+      } else if (key == "vup" || key == "camera_up" || key == "up" || key == "camera_north") {
         if (!(iss >> cfg.vup.x >> cfg.vup.y >> cfg.vup.z)) {
           if (err) {
             *err = "Error: invalid format for 'vup' in " +
@@ -269,7 +335,7 @@ namespace render {
           }
           return std::nullopt;
         }
-        cfg.aperture = v;  // <<< antes: (void)v;
+        cfg.aperture = v;
 
         // focus distance
       } else if (key == "focus_dist" ||
@@ -296,7 +362,7 @@ namespace render {
           }
           return std::nullopt;
         }
-        cfg.focus_dist = v;  // <<< antes: (void)v;
+        cfg.focus_dist = v;
 
         // max depth / bounces
       } else if (key == "max_depth" ||
@@ -323,7 +389,7 @@ namespace render {
           }
           return std::nullopt;
         }
-        cfg.max_depth = v;  // <<< antes: (void)v;
+        cfg.max_depth = v;
 
       } else {
         if (err) {
@@ -333,7 +399,7 @@ namespace render {
         return std::nullopt;
       }
 
-      // (mantén justo después tu chequeo de trailing tokens)
+      // trailing tokens (formato estricto)
       std::string trailing;
       if (iss >> trailing) {
         if (err) {
@@ -394,11 +460,11 @@ namespace render {
       }
 
       auto is_kind = [](std::string const & s) {
-        return s == "matte" || s == "metal" || s == "refractive";
+        return s == "matte" or s == "metal" or s == "refractive";
       };
 
       // -------- Material --------
-      if (head == "material" || is_kind(head)) {
+      if (head == "material" or is_kind(head)) {
         std::string kindStr, name;
         if (head == "material") {
           if (!(iss >> kindStr >> name)) {
@@ -432,7 +498,7 @@ namespace render {
 
         std::string tok;
         while (iss >> tok) {
-          if ((tok == "color") && m.kind != MaterialKind::Refractive) {
+          if ((tok == "color") and m.kind != MaterialKind::Refractive) {
             std::streampos pos = iss.tellg();
             double r, g, b;
             if (iss >> r >> g >> b) {

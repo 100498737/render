@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <th scope="row">Date:</th>
-      <td>2025-11-02 19:37:42</td>
+      <td>2025-11-02 20:11:24</td>
     </tr>
   </table>
 </div>
@@ -81,8 +81,8 @@
     <tr><td><a href="#l62">render::(anonymous namespace)::compute_viewport_vectors(render::(anonymous namespace)::CameraBasis const&amp;, double, double, render::vector&amp;, render::vector&amp;) (line 62)</a></td><td>not called</td><td>0.0%</td><td>-%</td><td>0.0%</td></tr>
     <tr><td><a href="#l68">render::(anonymous namespace)::make_camera_setup(unsigned int, unsigned int, double, render::vector const&amp;, render::vector const&amp;, render::vector const&amp;) (line 68)</a></td><td>not called</td><td>0.0%</td><td>-%</td><td>0.0%</td></tr>
     <tr><td><a href="#l99">render::camera::camera(unsigned int, unsigned int, double, render::vector const&amp;, render::vector const&amp;, render::vector const&amp;, unsigned int, unsigned long) (line 99)</a></td><td>called 3 times</td><td>100.0%</td><td>-%</td><td>100.0%</td></tr>
-    <tr><td><a href="#l106">render::camera::camera(unsigned int, unsigned int, double, render::vector const&amp;, render::vector const&amp;, render::vector const&amp;, unsigned int, unsigned long, double, double) (line 106)</a></td><td>called 10 times</td><td>100.0%</td><td>-%</td><td>100.0%</td></tr>
-    <tr><td><a href="#l140">render::camera::get_ray(unsigned int, unsigned int, unsigned int) (line 140)</a></td><td>called 32780 times</td><td>100.0%</td><td>62.5%</td><td>100.0%</td></tr>
+    <tr><td><a href="#l106">render::camera::camera(unsigned int, unsigned int, double, render::vector const&amp;, render::vector const&amp;, render::vector const&amp;, unsigned int, unsigned long, double, double) (line 106)</a></td><td>called 8 times</td><td>100.0%</td><td>-%</td><td>100.0%</td></tr>
+    <tr><td><a href="#l140">render::camera::get_ray(unsigned int, unsigned int, unsigned int) (line 140)</a></td><td>called 10 times</td><td>100.0%</td><td>62.5%</td><td>100.0%</td></tr>
     <tr><td><a href="#l9">render::random_in_unit_disk(std::mersenne_twister_engine&lt;unsigned long, 64ul, 312ul, 156ul, 31ul, 13043109905998158313ul, 29ul, 6148914691236517205ul, 17ul, 8202884508482404352ul, 37ul, 18444473444759240704ul, 43ul, 6364136223846793005ul&gt;&amp;, std::uniform_real_distribution&lt;double&gt;&amp;) (line 9)</a></td><td>called 2 times</td><td>100.0%</td><td>66.7%</td><td>100.0%</td></tr>
   </table>
 </details>
@@ -857,7 +857,7 @@
       <td class="lineno"><a id="l106" href="#l106">106</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">  </span><span class="n">camera</span><span class="o">::</span><span class="n">camera</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">image_width</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">image_height</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">vfov_deg</span><span class="p">,</span></td>
     </tr>
     <tr class="source-line">
@@ -878,21 +878,21 @@
       <td class="lineno"><a id="l109" href="#l109">109</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">focus_dist</span><span class="p">)</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l110" href="#l110">110</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="n">m_image_width</span><span class="p">(</span><span class="n">image_width</span><span class="p">),</span><span class="w"> </span><span class="n">m_image_height</span><span class="p">(</span><span class="n">image_height</span><span class="p">),</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l111" href="#l111">111</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">        </span><span class="n">m_samples_per_pixel</span><span class="p">(</span><span class="n">samples_per_pixel</span><span class="p">),</span><span class="w"> </span><span class="n">m_origin</span><span class="p">(</span><span class="n">lookfrom</span><span class="p">),</span><span class="w"> </span><span class="n">m_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">),</span><span class="w"> </span><span class="n">m_dist</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -906,28 +906,28 @@
       <td class="lineno"><a id="l113" href="#l113">113</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_w</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">lookfrom</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lookat</span><span class="p">).</span><span class="n">normalized</span><span class="p">();</span><span class="w">  </span><span class="c1">// mira de lookat -&gt; lookfrom</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l114" href="#l114">114</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_u</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">vup</span><span class="p">.</span><span class="n">cross</span><span class="p">(</span><span class="n">m_w</span><span class="p">)).</span><span class="n">normalized</span><span class="p">();</span><span class="w">     </span><span class="c1">// derecha</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l115" href="#l115">115</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_v</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="n">m_w</span><span class="p">.</span><span class="n">cross</span><span class="p">(</span><span class="n">m_u</span><span class="p">);</span><span class="w">                    </span><span class="c1">// arriba</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l116" href="#l116">116</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">vector</span><span class="w"> </span><span class="n">forward</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">-1.0</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_w</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -948,42 +948,42 @@
       <td class="lineno"><a id="l119" href="#l119">119</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">theta</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">vfov_deg</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">180.0</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l120" href="#l120">120</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">half_height</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l121" href="#l121">121</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">viewport_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">half_height</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l122" href="#l122">122</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">aspect_ratio</span><span class="w"> </span><span class="o">=</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l123" href="#l123">123</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">        </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">image_width</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">image_height</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l124" href="#l124">124</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">viewport_width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aspect_ratio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">viewport_height</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -1004,28 +1004,28 @@
       <td class="lineno"><a id="l127" href="#l127">127</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_horizontal</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">focus_dist</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">viewport_width</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_u</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l128" href="#l128">128</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_vertical</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">focus_dist</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">viewport_height</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_v</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l129" href="#l129">129</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">vector</span><span class="w"> </span><span class="n">center</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">lookfrom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">focus_dist</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">forward</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l130" href="#l130">130</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_lower_left_corner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">center</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_horizontal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_vertical</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -1046,14 +1046,14 @@
       <td class="lineno"><a id="l133" href="#l133">133</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_pixel_delta_u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_horizontal</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">image_width</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l134" href="#l134">134</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_pixel_delta_v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_vertical</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">image_height</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -1074,14 +1074,14 @@
       <td class="lineno"><a id="l137" href="#l137">137</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">    </span><span class="n">m_lens_radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">aperture</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l138" href="#l138">138</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">10</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">  </span><span class="p">}</span></td>
     </tr>
     <tr class="source-line">
@@ -1095,7 +1095,7 @@
       <td class="lineno"><a id="l140" href="#l140">140</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32780</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">  </span><span class="n">ray</span><span class="w"> </span><span class="n">camera</span><span class="o">::</span><span class="n">get_ray</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">px</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">py</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint32_t</span><span class="w"> </span><span class="cm">/*sample_id*/</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -1111,12 +1111,12 @@
         <details class="linebranchDetails">
           <summary class="linebranchSummary">1/2</summary>
           <div class="linebranchContents">
-            <div class="takenBranch">&check; Branch 2 &rightarrow; 3 taken 32780 times.</div>
+            <div class="takenBranch">&check; Branch 2 &rightarrow; 3 taken 10 times.</div>
             <div class="notTakenBranch">&cross; Branch 2 &rightarrow; 25 not taken.</div>
           </div>
         </details>
       </td>
-      <td class="linecount partialCoveredLine">32780</td>
+      <td class="linecount partialCoveredLine">10</td>
       <td class="src partialCoveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">jitter_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_dist</span><span class="p">(</span><span class="n">m_rng</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -1125,12 +1125,12 @@
         <details class="linebranchDetails">
           <summary class="linebranchSummary">1/2</summary>
           <div class="linebranchContents">
-            <div class="takenBranch">&check; Branch 3 &rightarrow; 4 taken 32780 times.</div>
+            <div class="takenBranch">&check; Branch 3 &rightarrow; 4 taken 10 times.</div>
             <div class="notTakenBranch">&cross; Branch 3 &rightarrow; 25 not taken.</div>
           </div>
         </details>
       </td>
-      <td class="linecount partialCoveredLine">32780</td>
+      <td class="linecount partialCoveredLine">10</td>
       <td class="src partialCoveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">jitter_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_dist</span><span class="p">(</span><span class="n">m_rng</span><span class="p">);</span></td>
     </tr>
     <tr class="source-line">
@@ -1144,14 +1144,14 @@
       <td class="lineno"><a id="l145" href="#l145">145</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32780</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">px_f</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">px</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jitter_x</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l146" href="#l146">146</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32780</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">py_flipped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">m_image_height</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1U</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">py</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jitter_y</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -1172,7 +1172,7 @@
       <td class="lineno"><a id="l149" href="#l149">149</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32780</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">        </span><span class="n">m_lower_left_corner</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">px_f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_pixel_delta_u</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">py_flipped</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m_pixel_delta_v</span><span class="p">;</span></td>
     </tr>
     <tr class="source-line">
@@ -1188,12 +1188,12 @@
         <details class="linebranchDetails">
           <summary class="linebranchSummary">2/2</summary>
           <div class="linebranchContents">
-            <div class="takenBranch">&check; Branch 8 &rightarrow; 9 taken 32778 times.</div>
+            <div class="takenBranch">&check; Branch 8 &rightarrow; 9 taken 8 times.</div>
             <div class="takenBranch">&check; Branch 8 &rightarrow; 13 taken 2 times.</div>
           </div>
         </details>
       </td>
-      <td class="linecount coveredLine">32780</td>
+      <td class="linecount coveredLine">10</td>
       <td class="src coveredLine"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_lens_radius</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span></td>
     </tr>
     <tr class="source-line">
@@ -1207,14 +1207,14 @@
       <td class="lineno"><a id="l153" href="#l153">153</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32778</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">      </span><span class="n">vector</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">pixel_sample</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m_origin</span><span class="p">).</span><span class="n">normalized</span><span class="p">();</span></td>
     </tr>
     <tr class="source-line">
       <td class="lineno"><a id="l154" href="#l154">154</a></td>
       <td class="linebranch">
       </td>
-      <td class="linecount coveredLine">32778</td>
+      <td class="linecount coveredLine">8</td>
       <td class="src coveredLine"><span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">m_origin</span><span class="p">,</span><span class="w"> </span><span class="n">dir</span><span class="p">};</span></td>
     </tr>
     <tr class="source-line">

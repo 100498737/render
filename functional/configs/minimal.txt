@@ -1,0 +1,13 @@
+aspect_ratio: 1.77778
+image_width: 200
+gamma: 2.2
+camera_position: 0 0 0
+camera_target: 0 0 -1
+camera_north: 0 1 0
+field_of_view: 60
+samples_per_pixel: 2
+max_depth: 2
+material_rng_seed: 1
+ray_rng_seed: 2
+background_dark_color: 0 0 0
+background_light_color: 0.7 0.8 1

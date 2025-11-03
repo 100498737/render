@@ -1,4 +1,3 @@
-#include "render/config.hpp"
 #include "render/parser.hpp"
 #include "render/ppm.hpp"
 #include <cerrno>
@@ -97,5 +96,5 @@ TEST(Parser, ParseMinimalSceneFile) {
   ASSERT_TRUE(scn) << err;
 
   // Si tu Scene expone contenedores:
-  EXPECT_GE(scn->spheres.size(), 1u);
+  EXPECT_GE(scn->spheres.size(), 1U);
 }
